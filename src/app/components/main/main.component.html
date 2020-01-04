@@ -1,9 +1,0 @@
-<div *ngIf="loginServive.isLoggedIn ===true && loginServive.loginType =='CUSTOMER'">
-    <app-customer-home></app-customer-home>
-</div>
-
-
-
-<app-admin-home *ngIf="loginServive.loginType == 'ADMIN'"></app-admin-home>
-
-<app-guest-home *ngIf="!loginServive.loginType"></app-guest-home>
