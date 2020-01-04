@@ -1,0 +1,4450 @@
+[
+    {
+        "id": 240,
+        "actionType": "INCOME",
+        "title": "",
+        "amount": 7000,
+        "actionDate": "2019-10-02",
+        "debitDate": "2019-10-02",
+        "category": {
+            "id": 5,
+            "name": "משכורת",
+            "description": "המשכורת הראשית ",
+            "type": "INCOME",
+            "active": true
+        },
+        "user": {
+            "id": 35,
+            "name": "ישראלה",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 241,
+        "actionType": "INCOME",
+        "title": "משכורת עבור חודש אוגוסט",
+        "amount": 7000,
+        "actionDate": "2019-09-02",
+        "debitDate": "2019-09-02",
+        "category": {
+            "id": 5,
+            "name": "משכורת",
+            "description": "המשכורת הראשית ",
+            "type": "INCOME",
+            "active": true
+        },
+        "user": {
+            "id": 35,
+            "name": "ישראלה",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 242,
+        "actionType": "INCOME",
+        "title": "משכורת עבור חודש יולי",
+        "amount": 6300,
+        "actionDate": "2019-08-02",
+        "debitDate": "2019-08-02",
+        "category": {
+            "id": 5,
+            "name": "משכורת",
+            "description": "המשכורת הראשית ",
+            "type": "INCOME",
+            "active": true
+        },
+        "user": {
+            "id": 35,
+            "name": "ישראלה",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 243,
+        "actionType": "INCOME",
+        "title": "",
+        "amount": 7200,
+        "actionDate": "2019-07-01",
+        "debitDate": "2019-07-01",
+        "category": {
+            "id": 5,
+            "name": "משכורת",
+            "description": "המשכורת הראשית ",
+            "type": "INCOME",
+            "active": true
+        },
+        "user": {
+            "id": 35,
+            "name": "ישראלה",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 244,
+        "actionType": "EXPENSE",
+        "title": "שכר דירה ",
+        "amount": 3600,
+        "actionDate": "2019-07-01",
+        "debitDate": "2019-07-01",
+        "category": {
+            "id": 3,
+            "name": "הוצאות דיור",
+            "description": "משכנתה, ארנונה, שכ\"ד",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 245,
+        "actionType": "EXPENSE",
+        "title": "שכר דירה ",
+        "amount": 3600,
+        "actionDate": "2019-07-01",
+        "debitDate": "2019-07-01",
+        "category": {
+            "id": 3,
+            "name": "הוצאות דיור",
+            "description": "משכנתה, ארנונה, שכ\"ד",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 35,
+            "name": "ישראלה",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 254,
+        "actionType": "EXPENSE",
+        "title": "קניות לבית",
+        "amount": 800,
+        "actionDate": "2019-07-01",
+        "debitDate": "2019-07-01",
+        "category": {
+            "id": 2,
+            "name": "קניות לבית ",
+            "description": "אוכל, מוצרי ניקיון, מוצרי הגיינה",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 256,
+        "actionType": "EXPENSE",
+        "title": "דלק לאוטו",
+        "amount": 250,
+        "actionDate": "2019-07-07",
+        "debitDate": "2019-07-07",
+        "category": {
+            "id": 14,
+            "name": "הוצאות רכב",
+            "description": null,
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 257,
+        "actionType": "EXPENSE",
+        "title": "דלק לאוטו",
+        "amount": 280,
+        "actionDate": "2019-07-01",
+        "debitDate": "2019-07-01",
+        "category": {
+            "id": 18,
+            "name": "מזומן שונות",
+            "description": "מזומן שיצא על משהו מזדמן",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 258,
+        "actionType": "EXPENSE",
+        "title": "חיסכון לדירה",
+        "amount": 2000,
+        "actionDate": "2019-07-20",
+        "debitDate": "2019-07-20",
+        "category": {
+            "id": 21,
+            "name": "הפקדה לחיסכון",
+            "description": null,
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 260,
+        "actionType": "EXPENSE",
+        "title": "חיסכון לילדים",
+        "amount": 500,
+        "actionDate": "2019-07-01",
+        "debitDate": "2019-07-01",
+        "category": {
+            "id": 21,
+            "name": "הפקדה לחיסכון",
+            "description": null,
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 36,
+            "name": "ילדים",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 268,
+        "actionType": "EXPENSE",
+        "title": "תשלום על קייטנה",
+        "amount": 1500,
+        "actionDate": "2019-07-01",
+        "debitDate": "2019-07-01",
+        "category": {
+            "id": 9,
+            "name": "חינוך לילדים",
+            "description": "בית ספר, גן, חוגים,קייטנות, שיעורים פרטיים",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 36,
+            "name": "ילדים",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 270,
+        "actionType": "EXPENSE",
+        "title": "שכר דירה ",
+        "amount": 3600,
+        "actionDate": "2019-08-01",
+        "debitDate": "2019-08-01",
+        "category": {
+            "id": 3,
+            "name": "הוצאות דיור",
+            "description": "משכנתה, ארנונה, שכ\"ד",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 35,
+            "name": "ישראלה",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 272,
+        "actionType": "EXPENSE",
+        "title": "קניות לבית ",
+        "amount": 2300,
+        "actionDate": "2019-08-15",
+        "debitDate": "2019-08-15",
+        "category": {
+            "id": 2,
+            "name": "קניות לבית ",
+            "description": "אוכל, מוצרי ניקיון, מוצרי הגיינה",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 276,
+        "actionType": "EXPENSE",
+        "title": "חשבון חשמל",
+        "amount": 960,
+        "actionDate": "2019-08-01",
+        "debitDate": "2019-08-01",
+        "category": {
+            "id": 4,
+            "name": "חשבונות",
+            "description": "חשבון חשמל, מים, גז",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 280,
+        "actionType": "EXPENSE",
+        "title": "חיסכון לאוטו",
+        "amount": 1500,
+        "actionDate": "2019-08-01",
+        "debitDate": "2019-08-01",
+        "category": {
+            "id": 21,
+            "name": "הפקדה לחיסכון",
+            "description": null,
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 287,
+        "actionType": "EXPENSE",
+        "title": "חיסכון לילדים",
+        "amount": 500,
+        "actionDate": "2019-09-01",
+        "debitDate": "2019-09-01",
+        "category": {
+            "id": 21,
+            "name": "הפקדה לחיסכון",
+            "description": null,
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 36,
+            "name": "ילדים",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 288,
+        "actionType": "EXPENSE",
+        "title": "קניות לבית חודש ספטמבר",
+        "amount": 2000,
+        "actionDate": "2019-09-01",
+        "debitDate": "2019-09-01",
+        "category": {
+            "id": 2,
+            "name": "קניות לבית ",
+            "description": "אוכל, מוצרי ניקיון, מוצרי הגיינה",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 289,
+        "actionType": "EXPENSE",
+        "title": "יציאה עם המשפחה",
+        "amount": 400,
+        "actionDate": "2019-09-01",
+        "debitDate": "2019-09-01",
+        "category": {
+            "id": 1,
+            "name": "בילוים",
+            "description": "מסעדות, מסיבות, ברים",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 291,
+        "actionType": "EXPENSE",
+        "title": "חשבון מים ",
+        "amount": 350,
+        "actionDate": "2019-09-01",
+        "debitDate": "2019-09-01",
+        "category": {
+            "id": 4,
+            "name": "חשבונות",
+            "description": "חשבון חשמל, מים, גז",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 292,
+        "actionType": "EXPENSE",
+        "title": "טיפול פה כללי",
+        "amount": 700,
+        "actionDate": "2019-09-01",
+        "debitDate": "2019-09-01",
+        "category": {
+            "id": 7,
+            "name": "הוצאות רפואיות ",
+            "description": "תרופות, טיפולים שיניים, חיסונים",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 293,
+        "actionType": "EXPENSE",
+        "title": "קורס ",
+        "amount": 2500,
+        "actionDate": "2019-09-01",
+        "debitDate": "2019-09-01",
+        "category": {
+            "id": 8,
+            "name": "לימודים",
+            "description": "ספרים, קורסים, ציוד למידה",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 294,
+        "actionType": "EXPENSE",
+        "title": "תשלום 3 מתוך 4 מחשב",
+        "amount": 530,
+        "actionDate": "2019-09-01",
+        "debitDate": "2019-09-01",
+        "category": {
+            "id": 10,
+            "name": "גאג'טים",
+            "description": "מחשב , סלולר, ציוד הקפי",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 296,
+        "actionType": "EXPENSE",
+        "title": "מונית",
+        "amount": 120,
+        "actionDate": "2019-09-01",
+        "debitDate": "2019-09-01",
+        "category": {
+            "id": 12,
+            "name": "תחבורה ציבורית",
+            "description": "אוטובוסים, מוניות ורכבות",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 35,
+            "name": "ישראלה",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 297,
+        "actionType": "EXPENSE",
+        "title": "ספרים לבית ספר",
+        "amount": 1500,
+        "actionDate": "2019-09-01",
+        "debitDate": "2019-09-01",
+        "category": {
+            "id": 9,
+            "name": "חינוך לילדים",
+            "description": "בית ספר, גן, חוגים,קייטנות, שיעורים פרטיים",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 36,
+            "name": "ילדים",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 298,
+        "actionType": "EXPENSE",
+        "title": "ביטוח בריאות לכל המשפחה",
+        "amount": 350,
+        "actionDate": "2019-09-01",
+        "debitDate": "2019-09-01",
+        "category": {
+            "id": 13,
+            "name": "ביטוחים",
+            "description": null,
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 300,
+        "actionType": "EXPENSE",
+        "title": "",
+        "amount": 15,
+        "actionDate": "2019-07-01",
+        "debitDate": "2019-07-01",
+        "category": {
+            "id": 20,
+            "name": "עמלות",
+            "description": null,
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 301,
+        "actionType": "EXPENSE",
+        "title": "",
+        "amount": 200,
+        "actionDate": "2019-07-01",
+        "debitDate": "2019-07-01",
+        "category": {
+            "id": 18,
+            "name": "מזומן שונות",
+            "description": "מזומן שיצא על משהו מזדמן",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 35,
+            "name": "ישראלה",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 303,
+        "actionType": "EXPENSE",
+        "title": "",
+        "amount": 200,
+        "actionDate": "2019-09-01",
+        "debitDate": "2019-09-01",
+        "category": {
+            "id": 15,
+            "name": "אירועים ומתנות",
+            "description": null,
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 304,
+        "actionType": "EXPENSE",
+        "title": "",
+        "amount": 1500,
+        "actionDate": "2019-09-01",
+        "debitDate": "2019-09-01",
+        "category": {
+            "id": 1,
+            "name": "בילוים",
+            "description": "מסעדות, מסיבות, ברים",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 305,
+        "actionType": "INCOME",
+        "title": "",
+        "amount": 250,
+        "actionDate": "2019-09-01",
+        "debitDate": "2019-09-01",
+        "category": {
+            "id": 17,
+            "name": "קצבה",
+            "description": null,
+            "type": "INCOME",
+            "active": true
+        },
+        "user": {
+            "id": 36,
+            "name": "ילדים",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 306,
+        "actionType": "EXPENSE",
+        "title": "",
+        "amount": 3600,
+        "actionDate": "2019-09-01",
+        "debitDate": "2019-09-01",
+        "category": {
+            "id": 3,
+            "name": "הוצאות דיור",
+            "description": "משכנתה, ארנונה, שכ\"ד",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 308,
+        "actionType": "EXPENSE",
+        "title": "",
+        "amount": 2700,
+        "actionDate": "2019-10-01",
+        "debitDate": "2019-10-01",
+        "category": {
+            "id": 2,
+            "name": "קניות לבית ",
+            "description": "אוכל, מוצרי ניקיון, מוצרי הגיינה",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 309,
+        "actionType": "EXPENSE",
+        "title": "",
+        "amount": 812.2,
+        "actionDate": "2019-10-01",
+        "debitDate": "2019-10-01",
+        "category": {
+            "id": 4,
+            "name": "חשבונות",
+            "description": "חשבון חשמל, מים, גז",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 310,
+        "actionType": "EXPENSE",
+        "title": "",
+        "amount": 2000,
+        "actionDate": "2019-10-01",
+        "debitDate": "2019-10-01",
+        "category": {
+            "id": 21,
+            "name": "הפקדה לחיסכון",
+            "description": null,
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 311,
+        "actionType": "EXPENSE",
+        "title": "",
+        "amount": 1500,
+        "actionDate": "2019-10-01",
+        "debitDate": "2019-10-01",
+        "category": {
+            "id": 21,
+            "name": "הפקדה לחיסכון",
+            "description": null,
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 35,
+            "name": "ישראלה",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 312,
+        "actionType": "EXPENSE",
+        "title": "",
+        "amount": 500,
+        "actionDate": "2019-10-01",
+        "debitDate": "2019-10-01",
+        "category": {
+            "id": 21,
+            "name": "הפקדה לחיסכון",
+            "description": null,
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 36,
+            "name": "ילדים",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 313,
+        "actionType": "EXPENSE",
+        "title": "",
+        "amount": 530,
+        "actionDate": "2019-10-01",
+        "debitDate": "2019-10-01",
+        "category": {
+            "id": 10,
+            "name": "גאג'טים",
+            "description": "מחשב , סלולר, ציוד הקפי",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 314,
+        "actionType": "EXPENSE",
+        "title": "",
+        "amount": 1200,
+        "actionDate": "2019-10-01",
+        "debitDate": "2019-10-01",
+        "category": {
+            "id": 14,
+            "name": "הוצאות רכב",
+            "description": null,
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 317,
+        "actionType": "EXPENSE",
+        "title": "",
+        "amount": 500,
+        "actionDate": "2019-10-01",
+        "debitDate": "2019-10-01",
+        "category": {
+            "id": 18,
+            "name": "מזומן שונות",
+            "description": "מזומן שיצא על משהו מזדמן",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 35,
+            "name": "ישראלה",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 318,
+        "actionType": "EXPENSE",
+        "title": "",
+        "amount": 250,
+        "actionDate": "2019-10-01",
+        "debitDate": "2019-10-01",
+        "category": {
+            "id": 11,
+            "name": "ספורט ובריאות",
+            "description": "כולל חדר כושר, טיפולים אלטרנטיבים ועוד..",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 35,
+            "name": "ישראלה",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 319,
+        "actionType": "EXPENSE",
+        "title": "",
+        "amount": 250,
+        "actionDate": "2019-10-01",
+        "debitDate": "2019-10-01",
+        "category": {
+            "id": 20,
+            "name": "עמלות",
+            "description": null,
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 320,
+        "actionType": "EXPENSE",
+        "title": "",
+        "amount": 200,
+        "actionDate": "2019-10-01",
+        "debitDate": "2019-10-01",
+        "category": {
+            "id": 19,
+            "name": "חופשה",
+            "description": "",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 321,
+        "actionType": "EXPENSE",
+        "title": "",
+        "amount": 220,
+        "actionDate": "2019-10-01",
+        "debitDate": "2019-10-01",
+        "category": {
+            "id": 12,
+            "name": "תחבורה ציבורית",
+            "description": "אוטובוסים, מוניות ורכבות",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 36,
+            "name": "ילדים",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 322,
+        "actionType": "EXPENSE",
+        "title": "",
+        "amount": 500,
+        "actionDate": "2019-10-01",
+        "debitDate": "2019-10-01",
+        "category": {
+            "id": 16,
+            "name": "תקשורת",
+            "description": null,
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 79,
+            "name": "חשבון עו\"ש משותף",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 246,
+        "actionType": "EXPENSE",
+        "title": "ארנונה",
+        "amount": 500,
+        "actionDate": "2019-07-01",
+        "debitDate": "2019-07-10",
+        "category": {
+            "id": 3,
+            "name": "הוצאות דיור",
+            "description": "משכנתה, ארנונה, שכ\"ד",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 80,
+            "name": "כרטיס אשראי ישראל",
+            "active": true,
+            "debitDate": 10
+        }
+    },
+    {
+        "id": 247,
+        "actionType": "EXPENSE",
+        "title": "סלולר+ אינטרנט+ כבלים",
+        "amount": 422.3,
+        "actionDate": "2019-07-01",
+        "debitDate": "2019-07-10",
+        "category": {
+            "id": 16,
+            "name": "תקשורת",
+            "description": null,
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 35,
+            "name": "ישראלה",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 80,
+            "name": "כרטיס אשראי ישראל",
+            "active": true,
+            "debitDate": 10
+        }
+    },
+    {
+        "id": 248,
+        "actionType": "EXPENSE",
+        "title": "יציאה עם ירדן וירדנה",
+        "amount": 320,
+        "actionDate": "2019-07-05",
+        "debitDate": "2019-07-10",
+        "category": {
+            "id": 1,
+            "name": "בילוים",
+            "description": "מסעדות, מסיבות, ברים",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 80,
+            "name": "כרטיס אשראי ישראל",
+            "active": true,
+            "debitDate": 10
+        }
+    },
+    {
+        "id": 249,
+        "actionType": "EXPENSE",
+        "title": "קניות לבית",
+        "amount": 723.8,
+        "actionDate": "2019-07-10",
+        "debitDate": "2019-08-10",
+        "category": {
+            "id": 2,
+            "name": "קניות לבית ",
+            "description": "אוכל, מוצרי ניקיון, מוצרי הגיינה",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 80,
+            "name": "כרטיס אשראי ישראל",
+            "active": true,
+            "debitDate": 10
+        }
+    },
+    {
+        "id": 255,
+        "actionType": "EXPENSE",
+        "title": "דלק לאוטו",
+        "amount": 250,
+        "actionDate": "2019-07-01",
+        "debitDate": "2019-07-10",
+        "category": {
+            "id": 14,
+            "name": "הוצאות רכב",
+            "description": null,
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 80,
+            "name": "כרטיס אשראי ישראל",
+            "active": true,
+            "debitDate": 10
+        }
+    },
+    {
+        "id": 266,
+        "actionType": "EXPENSE",
+        "title": "פיצה",
+        "amount": 120,
+        "actionDate": "2019-07-01",
+        "debitDate": "2019-07-10",
+        "category": {
+            "id": 2,
+            "name": "קניות לבית ",
+            "description": "אוכל, מוצרי ניקיון, מוצרי הגיינה",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 80,
+            "name": "כרטיס אשראי ישראל",
+            "active": true,
+            "debitDate": 10
+        }
+    },
+    {
+        "id": 275,
+        "actionType": "EXPENSE",
+        "title": "בר עם שלמה ושמעון",
+        "amount": 500,
+        "actionDate": "2019-08-01",
+        "debitDate": "2019-08-10",
+        "category": {
+            "id": 1,
+            "name": "בילוים",
+            "description": "מסעדות, מסיבות, ברים",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 80,
+            "name": "כרטיס אשראי ישראל",
+            "active": true,
+            "debitDate": 10
+        }
+    },
+    {
+        "id": 278,
+        "actionType": "EXPENSE",
+        "title": "שיאצו לישראל",
+        "amount": 350,
+        "actionDate": "2019-08-01",
+        "debitDate": "2019-08-10",
+        "category": {
+            "id": 11,
+            "name": "ספורט ובריאות",
+            "description": "כולל חדר כושר, טיפולים אלטרנטיבים ועוד..",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 80,
+            "name": "כרטיס אשראי ישראל",
+            "active": true,
+            "debitDate": 10
+        }
+    },
+    {
+        "id": 283,
+        "actionType": "EXPENSE",
+        "title": "שכר דירה",
+        "amount": 3600,
+        "actionDate": "2019-09-01",
+        "debitDate": "2019-09-10",
+        "category": {
+            "id": 3,
+            "name": "הוצאות דיור",
+            "description": "משכנתה, ארנונה, שכ\"ד",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 80,
+            "name": "כרטיס אשראי ישראל",
+            "active": true,
+            "debitDate": 10
+        }
+    },
+    {
+        "id": 316,
+        "actionType": "EXPENSE",
+        "title": "",
+        "amount": 102,
+        "actionDate": "2019-10-01",
+        "debitDate": "2019-10-10",
+        "category": {
+            "id": 13,
+            "name": "ביטוחים",
+            "description": null,
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 80,
+            "name": "כרטיס אשראי ישראל",
+            "active": true,
+            "debitDate": 10
+        }
+    },
+    {
+        "id": 323,
+        "actionType": "EXPENSE",
+        "title": "",
+        "amount": 306,
+        "actionDate": "2019-10-01",
+        "debitDate": "2019-10-10",
+        "category": {
+            "id": 15,
+            "name": "אירועים ומתנות",
+            "description": null,
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 80,
+            "name": "כרטיס אשראי ישראל",
+            "active": true,
+            "debitDate": 10
+        }
+    },
+    {
+        "id": 324,
+        "actionType": "EXPENSE",
+        "title": "",
+        "amount": 1000,
+        "actionDate": "2019-10-01",
+        "debitDate": "2019-10-10",
+        "category": {
+            "id": 7,
+            "name": "הוצאות רפואיות ",
+            "description": "תרופות, טיפולים שיניים, חיסונים",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 36,
+            "name": "ילדים",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 80,
+            "name": "כרטיס אשראי ישראל",
+            "active": true,
+            "debitDate": 10
+        }
+    },
+    {
+        "id": 252,
+        "actionType": "EXPENSE",
+        "title": "",
+        "amount": 500,
+        "actionDate": "2019-10-20",
+        "debitDate": "2019-11-02",
+        "category": {
+            "id": 23,
+            "name": "ביגוד והנעלה",
+            "description": null,
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 35,
+            "name": "ישראלה",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 81,
+            "name": "כרטיס אשראי ישראלה",
+            "active": true,
+            "debitDate": 2
+        }
+    },
+    {
+        "id": 253,
+        "actionType": "EXPENSE",
+        "title": "גן פרטי ליהודה",
+        "amount": 2000,
+        "actionDate": "2019-07-01",
+        "debitDate": "2019-07-02",
+        "category": {
+            "id": 9,
+            "name": "חינוך לילדים",
+            "description": "בית ספר, גן, חוגים,קייטנות, שיעורים פרטיים",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 36,
+            "name": "ילדים",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 81,
+            "name": "כרטיס אשראי ישראלה",
+            "active": true,
+            "debitDate": 2
+        }
+    },
+    {
+        "id": 259,
+        "actionType": "EXPENSE",
+        "title": "חיסכון לאוטו חדש",
+        "amount": 1000,
+        "actionDate": "2019-07-01",
+        "debitDate": "2019-07-02",
+        "category": {
+            "id": 21,
+            "name": "הפקדה לחיסכון",
+            "description": null,
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 35,
+            "name": "ישראלה",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 81,
+            "name": "כרטיס אשראי ישראלה",
+            "active": true,
+            "debitDate": 2
+        }
+    },
+    {
+        "id": 262,
+        "actionType": "EXPENSE",
+        "title": "מסעדה עם חברות ",
+        "amount": 800,
+        "actionDate": "2019-07-01",
+        "debitDate": "2019-07-02",
+        "category": {
+            "id": 1,
+            "name": "בילוים",
+            "description": "מסעדות, מסיבות, ברים",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 35,
+            "name": "ישראלה",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 81,
+            "name": "כרטיס אשראי ישראלה",
+            "active": true,
+            "debitDate": 2
+        }
+    },
+    {
+        "id": 263,
+        "actionType": "EXPENSE",
+        "title": "נעלים לרחל",
+        "amount": 500,
+        "actionDate": "2019-07-01",
+        "debitDate": "2019-07-02",
+        "category": {
+            "id": 23,
+            "name": "ביגוד והנעלה",
+            "description": null,
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 36,
+            "name": "ילדים",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 81,
+            "name": "כרטיס אשראי ישראלה",
+            "active": true,
+            "debitDate": 2
+        }
+    },
+    {
+        "id": 264,
+        "actionType": "EXPENSE",
+        "title": "אוכל לבית ",
+        "amount": 1200,
+        "actionDate": "2019-07-01",
+        "debitDate": "2019-07-02",
+        "category": {
+            "id": 2,
+            "name": "קניות לבית ",
+            "description": "אוכל, מוצרי ניקיון, מוצרי הגיינה",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 35,
+            "name": "ישראלה",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 81,
+            "name": "כרטיס אשראי ישראלה",
+            "active": true,
+            "debitDate": 2
+        }
+    },
+    {
+        "id": 267,
+        "actionType": "EXPENSE",
+        "title": "מסעדה עם הילדים",
+        "amount": 350,
+        "actionDate": "2019-07-01",
+        "debitDate": "2019-07-02",
+        "category": {
+            "id": 1,
+            "name": "בילוים",
+            "description": "מסעדות, מסיבות, ברים",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 35,
+            "name": "ישראלה",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 81,
+            "name": "כרטיס אשראי ישראלה",
+            "active": true,
+            "debitDate": 2
+        }
+    },
+    {
+        "id": 269,
+        "actionType": "EXPENSE",
+        "title": "כרטיסי טיסה לחול",
+        "amount": 2300,
+        "actionDate": "2019-07-01",
+        "debitDate": "2019-07-02",
+        "category": {
+            "id": 19,
+            "name": "חופשה",
+            "description": "",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 35,
+            "name": "ישראלה",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 81,
+            "name": "כרטיס אשראי ישראלה",
+            "active": true,
+            "debitDate": 2
+        }
+    },
+    {
+        "id": 273,
+        "actionType": "EXPENSE",
+        "title": "קייטנה",
+        "amount": 1500,
+        "actionDate": "2019-08-01",
+        "debitDate": "2019-08-02",
+        "category": {
+            "id": 9,
+            "name": "חינוך לילדים",
+            "description": "בית ספר, גן, חוגים,קייטנות, שיעורים פרטיים",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 36,
+            "name": "ילדים",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 81,
+            "name": "כרטיס אשראי ישראלה",
+            "active": true,
+            "debitDate": 2
+        }
+    },
+    {
+        "id": 274,
+        "actionType": "EXPENSE",
+        "title": "תשלום 2 מתוך 4 על מחשב",
+        "amount": 530,
+        "actionDate": "2019-08-01",
+        "debitDate": "2019-08-02",
+        "category": {
+            "id": 10,
+            "name": "גאג'טים",
+            "description": "מחשב , סלולר, ציוד הקפי",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 81,
+            "name": "כרטיס אשראי ישראלה",
+            "active": true,
+            "debitDate": 2
+        }
+    },
+    {
+        "id": 277,
+        "actionType": "EXPENSE",
+        "title": "שיננית לישראלה",
+        "amount": 350,
+        "actionDate": "2019-08-01",
+        "debitDate": "2019-08-02",
+        "category": {
+            "id": 7,
+            "name": "הוצאות רפואיות ",
+            "description": "תרופות, טיפולים שיניים, חיסונים",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 35,
+            "name": "ישראלה",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 81,
+            "name": "כרטיס אשראי ישראלה",
+            "active": true,
+            "debitDate": 2
+        }
+    },
+    {
+        "id": 284,
+        "actionType": "EXPENSE",
+        "title": "שכר דירה ",
+        "amount": 3600,
+        "actionDate": "2019-09-01",
+        "debitDate": "2019-09-02",
+        "category": {
+            "id": 3,
+            "name": "הוצאות דיור",
+            "description": "משכנתה, ארנונה, שכ\"ד",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 35,
+            "name": "ישראלה",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 81,
+            "name": "כרטיס אשראי ישראלה",
+            "active": true,
+            "debitDate": 2
+        }
+    },
+    {
+        "id": 286,
+        "actionType": "EXPENSE",
+        "title": "חיסכון לרכב",
+        "amount": 1500,
+        "actionDate": "2019-09-01",
+        "debitDate": "2019-09-02",
+        "category": {
+            "id": 21,
+            "name": "הפקדה לחיסכון",
+            "description": null,
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 35,
+            "name": "ישראלה",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 81,
+            "name": "כרטיס אשראי ישראלה",
+            "active": true,
+            "debitDate": 2
+        }
+    },
+    {
+        "id": 290,
+        "actionType": "EXPENSE",
+        "title": "יציאה עם חברות",
+        "amount": 320,
+        "actionDate": "2019-09-01",
+        "debitDate": "2019-09-02",
+        "category": {
+            "id": 1,
+            "name": "בילוים",
+            "description": "מסעדות, מסיבות, ברים",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 35,
+            "name": "ישראלה",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 81,
+            "name": "כרטיס אשראי ישראלה",
+            "active": true,
+            "debitDate": 2
+        }
+    },
+    {
+        "id": 295,
+        "actionType": "EXPENSE",
+        "title": "חדר כושר ישראלה",
+        "amount": 250,
+        "actionDate": "2019-09-01",
+        "debitDate": "2019-09-02",
+        "category": {
+            "id": 11,
+            "name": "ספורט ובריאות",
+            "description": "כולל חדר כושר, טיפולים אלטרנטיבים ועוד..",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 35,
+            "name": "ישראלה",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 81,
+            "name": "כרטיס אשראי ישראלה",
+            "active": true,
+            "debitDate": 2
+        }
+    },
+    {
+        "id": 299,
+        "actionType": "INCOME",
+        "title": "",
+        "amount": 2000,
+        "actionDate": "2019-07-01",
+        "debitDate": "2019-07-02",
+        "category": {
+            "id": 25,
+            "name": "עזרה ממהורים",
+            "description": null,
+            "type": "INCOME",
+            "active": true
+        },
+        "user": {
+            "id": 35,
+            "name": "ישראלה",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 81,
+            "name": "כרטיס אשראי ישראלה",
+            "active": true,
+            "debitDate": 2
+        }
+    },
+    {
+        "id": 302,
+        "actionType": "EXPENSE",
+        "title": "",
+        "amount": 500,
+        "actionDate": "2019-07-01",
+        "debitDate": "2019-07-02",
+        "category": {
+            "id": 1,
+            "name": "בילוים",
+            "description": "מסעדות, מסיבות, ברים",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 81,
+            "name": "כרטיס אשראי ישראלה",
+            "active": true,
+            "debitDate": 2
+        }
+    },
+    {
+        "id": 307,
+        "actionType": "EXPENSE",
+        "title": "",
+        "amount": 3600,
+        "actionDate": "2019-10-01",
+        "debitDate": "2019-10-02",
+        "category": {
+            "id": 3,
+            "name": "הוצאות דיור",
+            "description": "משכנתה, ארנונה, שכ\"ד",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 35,
+            "name": "ישראלה",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 81,
+            "name": "כרטיס אשראי ישראלה",
+            "active": true,
+            "debitDate": 2
+        }
+    },
+    {
+        "id": 315,
+        "actionType": "EXPENSE",
+        "title": "",
+        "amount": 800,
+        "actionDate": "2019-10-01",
+        "debitDate": "2019-10-02",
+        "category": {
+            "id": 15,
+            "name": "אירועים ומתנות",
+            "description": null,
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 35,
+            "name": "ישראלה",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 81,
+            "name": "כרטיס אשראי ישראלה",
+            "active": true,
+            "debitDate": 2
+        }
+    },
+    {
+        "id": 325,
+        "actionType": "EXPENSE",
+        "title": "",
+        "amount": 1500,
+        "actionDate": "2019-10-01",
+        "debitDate": "2019-10-02",
+        "category": {
+            "id": 23,
+            "name": "ביגוד והנעלה",
+            "description": null,
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 35,
+            "name": "ישראלה",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 81,
+            "name": "כרטיס אשראי ישראלה",
+            "active": true,
+            "debitDate": 2
+        }
+    },
+    {
+        "id": 326,
+        "actionType": "EXPENSE",
+        "title": "",
+        "amount": 805,
+        "actionDate": "2019-10-01",
+        "debitDate": "2019-10-02",
+        "category": {
+            "id": 18,
+            "name": "מזומן שונות",
+            "description": "מזומן שיצא על משהו מזדמן",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 35,
+            "name": "ישראלה",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 81,
+            "name": "כרטיס אשראי ישראלה",
+            "active": true,
+            "debitDate": 2
+        }
+    },
+    {
+        "id": 236,
+        "actionType": "INCOME",
+        "title": "",
+        "amount": 15000,
+        "actionDate": "2019-10-10",
+        "debitDate": "2019-10-10",
+        "category": {
+            "id": 5,
+            "name": "משכורת",
+            "description": "המשכורת הראשית ",
+            "type": "INCOME",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 82,
+            "name": "חשבון עו\"ש ישראל",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 237,
+        "actionType": "INCOME",
+        "title": "משכורת עבור חודש אוגוסט",
+        "amount": 15000,
+        "actionDate": "2019-09-10",
+        "debitDate": "2019-09-10",
+        "category": {
+            "id": 5,
+            "name": "משכורת",
+            "description": "המשכורת הראשית ",
+            "type": "INCOME",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 82,
+            "name": "חשבון עו\"ש ישראל",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 238,
+        "actionType": "INCOME",
+        "title": "",
+        "amount": 15000,
+        "actionDate": "2019-08-10",
+        "debitDate": "2019-08-10",
+        "category": {
+            "id": 5,
+            "name": "משכורת",
+            "description": "המשכורת הראשית ",
+            "type": "INCOME",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 82,
+            "name": "חשבון עו\"ש ישראל",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 239,
+        "actionType": "INCOME",
+        "title": "משכורת + דמי הבראה ",
+        "amount": 16600,
+        "actionDate": "2019-07-10",
+        "debitDate": "2019-07-10",
+        "category": {
+            "id": 5,
+            "name": "משכורת",
+            "description": "המשכורת הראשית ",
+            "type": "INCOME",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 82,
+            "name": "חשבון עו\"ש ישראל",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 261,
+        "actionType": "EXPENSE",
+        "title": "תשלום 1 מתוך 5 על מחשב",
+        "amount": 520,
+        "actionDate": "2019-07-01",
+        "debitDate": "2019-07-01",
+        "category": {
+            "id": 10,
+            "name": "גאג'טים",
+            "description": "מחשב , סלולר, ציוד הקפי",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 82,
+            "name": "חשבון עו\"ש ישראל",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 265,
+        "actionType": "EXPENSE",
+        "title": "צ'ק מתנה לברית של מנחם",
+        "amount": 750,
+        "actionDate": "2019-07-01",
+        "debitDate": "2019-07-01",
+        "category": {
+            "id": 15,
+            "name": "אירועים ומתנות",
+            "description": null,
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 82,
+            "name": "חשבון עו\"ש ישראל",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 271,
+        "actionType": "EXPENSE",
+        "title": "שכר דירה ",
+        "amount": 3600,
+        "actionDate": "2019-08-01",
+        "debitDate": "2019-08-01",
+        "category": {
+            "id": 3,
+            "name": "הוצאות דיור",
+            "description": "משכנתה, ארנונה, שכ\"ד",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 82,
+            "name": "חשבון עו\"ש ישראל",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 279,
+        "actionType": "EXPENSE",
+        "title": "חיסכון לדירה",
+        "amount": 2000,
+        "actionDate": "2019-08-01",
+        "debitDate": "2019-08-01",
+        "category": {
+            "id": 21,
+            "name": "הפקדה לחיסכון",
+            "description": null,
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 82,
+            "name": "חשבון עו\"ש ישראל",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 281,
+        "actionType": "EXPENSE",
+        "title": "חיסכון לילדים",
+        "amount": 500,
+        "actionDate": "2019-08-01",
+        "debitDate": "2019-08-01",
+        "category": {
+            "id": 21,
+            "name": "הפקדה לחיסכון",
+            "description": null,
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 36,
+            "name": "ילדים",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 82,
+            "name": "חשבון עו\"ש ישראל",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 282,
+        "actionType": "EXPENSE",
+        "title": "אלף דולר לחופשה בחול ",
+        "amount": 3552,
+        "actionDate": "2019-08-01",
+        "debitDate": "2019-08-01",
+        "category": {
+            "id": 19,
+            "name": "חופשה",
+            "description": "",
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 82,
+            "name": "חשבון עו\"ש ישראל",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    {
+        "id": 285,
+        "actionType": "EXPENSE",
+        "title": "חיסכון לדירה",
+        "amount": 2000,
+        "actionDate": "2019-09-01",
+        "debitDate": "2019-09-01",
+        "category": {
+            "id": 21,
+            "name": "הפקדה לחיסכון",
+            "description": null,
+            "type": "EXPENSE",
+            "active": true
+        },
+        "user": {
+            "id": 34,
+            "name": "ישראל",
+            "active": true
+        },
+        "methodPayment": {
+            "id": 82,
+            "name": "חשבון עו\"ש ישראל",
+            "active": true,
+            "debitDate": 0
+        }
+    },
+    [
+        {
+            "id": 327,
+            "actionType": "INCOME",
+            "title": "",
+            "amount": 6000,
+            "actionDate": "2019-10-10",
+            "debitDate": "2019-10-10",
+            "category": {
+                "id": 5,
+                "name": "משכורת",
+                "description": "המשכורת הראשית ",
+                "type": "INCOME",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 83,
+                "name": "חשבון עו\"ש",
+                "active": true,
+                "debitDate": 0
+            }
+        },
+        {
+            "id": 328,
+            "actionType": "EXPENSE",
+            "title": "שכר דירה + ארנונה",
+            "amount": 2500,
+            "actionDate": "2019-10-10",
+            "debitDate": "2019-10-10",
+            "category": {
+                "id": 3,
+                "name": "הוצאות דיור",
+                "description": "משכנתה, ארנונה, שכ\"ד",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 83,
+                "name": "חשבון עו\"ש",
+                "active": true,
+                "debitDate": 0
+            }
+        },
+        {
+            "id": 340,
+            "actionType": "INCOME",
+            "title": "",
+            "amount": 6200,
+            "actionDate": "2019-09-10",
+            "debitDate": "2019-09-10",
+            "category": {
+                "id": 5,
+                "name": "משכורת",
+                "description": "המשכורת הראשית ",
+                "type": "INCOME",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 83,
+                "name": "חשבון עו\"ש",
+                "active": true,
+                "debitDate": 0
+            }
+        },
+        {
+            "id": 341,
+            "actionType": "EXPENSE",
+            "title": "שכ\"ד + ארנונה",
+            "amount": 2500,
+            "actionDate": "2019-09-01",
+            "debitDate": "2019-09-01",
+            "category": {
+                "id": 3,
+                "name": "הוצאות דיור",
+                "description": "משכנתה, ארנונה, שכ\"ד",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 83,
+                "name": "חשבון עו\"ש",
+                "active": true,
+                "debitDate": 0
+            }
+        },
+        {
+            "id": 348,
+            "actionType": "EXPENSE",
+            "title": "חתונה לשמוליק",
+            "amount": 400,
+            "actionDate": "2019-09-18",
+            "debitDate": "2019-09-18",
+            "category": {
+                "id": 15,
+                "name": "אירועים ומתנות",
+                "description": null,
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 83,
+                "name": "חשבון עו\"ש",
+                "active": true,
+                "debitDate": 0
+            }
+        },
+        {
+            "id": 351,
+            "actionType": "EXPENSE",
+            "title": "",
+            "amount": 2500,
+            "actionDate": "2019-08-10",
+            "debitDate": "2019-08-10",
+            "category": {
+                "id": 3,
+                "name": "הוצאות דיור",
+                "description": "משכנתה, ארנונה, שכ\"ד",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 83,
+                "name": "חשבון עו\"ש",
+                "active": true,
+                "debitDate": 0
+            }
+        },
+        {
+            "id": 352,
+            "actionType": "INCOME",
+            "title": "",
+            "amount": 6800,
+            "actionDate": "2019-08-01",
+            "debitDate": "2019-08-01",
+            "category": {
+                "id": 5,
+                "name": "משכורת",
+                "description": "המשכורת הראשית ",
+                "type": "INCOME",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 83,
+                "name": "חשבון עו\"ש",
+                "active": true,
+                "debitDate": 0
+            }
+        },
+        {
+            "id": 354,
+            "actionType": "EXPENSE",
+            "title": "חיסכון טווח ארוך",
+            "amount": 1000,
+            "actionDate": "2019-08-01",
+            "debitDate": "2019-08-01",
+            "category": {
+                "id": 21,
+                "name": "הפקדה לחיסכון",
+                "description": null,
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 83,
+                "name": "חשבון עו\"ש",
+                "active": true,
+                "debitDate": 0
+            }
+        },
+        {
+            "id": 359,
+            "actionType": "EXPENSE",
+            "title": "חיסכון לחופשה",
+            "amount": 250,
+            "actionDate": "2019-08-01",
+            "debitDate": "2019-08-01",
+            "category": {
+                "id": 19,
+                "name": "חופשה",
+                "description": "",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 83,
+                "name": "חשבון עו\"ש",
+                "active": true,
+                "debitDate": 0
+            }
+        },
+        {
+            "id": 397,
+            "actionType": "EXPENSE",
+            "title": "תשלום 3 מתוך 12 על ביטוח רכב",
+            "amount": 130,
+            "actionDate": "2019-09-10",
+            "debitDate": "2019-09-10",
+            "category": {
+                "id": 13,
+                "name": "ביטוחים",
+                "description": null,
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 83,
+                "name": "חשבון עו\"ש",
+                "active": true,
+                "debitDate": 0
+            }
+        },
+        {
+            "id": 363,
+            "actionType": "EXPENSE",
+            "title": "בזבוזים בארנק",
+            "amount": 450,
+            "actionDate": "2019-08-15",
+            "debitDate": "2019-08-15",
+            "category": {
+                "id": 18,
+                "name": "מזומן שונות",
+                "description": "מזומן שיצא על משהו מזדמן",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 83,
+                "name": "חשבון עו\"ש",
+                "active": true,
+                "debitDate": 0
+            }
+        },
+        {
+            "id": 367,
+            "actionType": "EXPENSE",
+            "title": "מסעדה עם שמי",
+            "amount": 119.9,
+            "actionDate": "2019-08-15",
+            "debitDate": "2019-08-15",
+            "category": {
+                "id": 1,
+                "name": "בילוים",
+                "description": "מסעדות, מסיבות, ברים",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 83,
+                "name": "חשבון עו\"ש",
+                "active": true,
+                "debitDate": 0
+            }
+        },
+        {
+            "id": 371,
+            "actionType": "EXPENSE",
+            "title": "מסיבה",
+            "amount": 250,
+            "actionDate": "2019-08-29",
+            "debitDate": "2019-08-29",
+            "category": {
+                "id": 1,
+                "name": "בילוים",
+                "description": "מסעדות, מסיבות, ברים",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 83,
+                "name": "חשבון עו\"ש",
+                "active": true,
+                "debitDate": 0
+            }
+        },
+        {
+            "id": 381,
+            "actionType": "EXPENSE",
+            "title": "על האש ",
+            "amount": 300,
+            "actionDate": "2019-10-25",
+            "debitDate": "2019-10-25",
+            "category": {
+                "id": 1,
+                "name": "בילוים",
+                "description": "מסעדות, מסיבות, ברים",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 83,
+                "name": "חשבון עו\"ש",
+                "active": true,
+                "debitDate": 0
+            }
+        },
+        {
+            "id": 393,
+            "actionType": "EXPENSE",
+            "title": "מונית לשוק",
+            "amount": 75,
+            "actionDate": "2019-08-05",
+            "debitDate": "2019-08-05",
+            "category": {
+                "id": 12,
+                "name": "תחבורה ציבורית",
+                "description": "אוטובוסים, מוניות ורכבות",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 83,
+                "name": "חשבון עו\"ש",
+                "active": true,
+                "debitDate": 0
+            }
+        },
+        {
+            "id": 402,
+            "actionType": "INCOME",
+            "title": "מכירת פלאפון ישן",
+            "amount": 750,
+            "actionDate": "2019-08-01",
+            "debitDate": "2019-08-01",
+            "category": {
+                "id": 26,
+                "name": "הכנסה נוספת",
+                "description": null,
+                "type": "INCOME",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 83,
+                "name": "חשבון עו\"ש",
+                "active": true,
+                "debitDate": 0
+            }
+        },
+        {
+            "id": 411,
+            "actionType": "EXPENSE",
+            "title": "חיסכון לחופשה",
+            "amount": 250,
+            "actionDate": "2019-09-01",
+            "debitDate": "2019-09-01",
+            "category": {
+                "id": 19,
+                "name": "חופשה",
+                "description": "",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 83,
+                "name": "חשבון עו\"ש",
+                "active": true,
+                "debitDate": 0
+            }
+        },
+        {
+            "id": 412,
+            "actionType": "EXPENSE",
+            "title": "חיסכון ארוך טווח",
+            "amount": 1000,
+            "actionDate": "2019-09-01",
+            "debitDate": "2019-09-01",
+            "category": {
+                "id": 21,
+                "name": "הפקדה לחיסכון",
+                "description": null,
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 83,
+                "name": "חשבון עו\"ש",
+                "active": true,
+                "debitDate": 0
+            }
+        },
+        {
+            "id": 413,
+            "actionType": "INCOME",
+            "title": "סיבוב עם הכלב של השכנה",
+            "amount": 200,
+            "actionDate": "2019-09-15",
+            "debitDate": "2019-09-15",
+            "category": {
+                "id": 26,
+                "name": "הכנסה נוספת",
+                "description": null,
+                "type": "INCOME",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 83,
+                "name": "חשבון עו\"ש",
+                "active": true,
+                "debitDate": 0
+            }
+        },
+        {
+            "id": 414,
+            "actionType": "INCOME",
+            "title": "עזרה מאבא",
+            "amount": 750,
+            "actionDate": "2019-10-01",
+            "debitDate": "2019-10-01",
+            "category": {
+                "id": 25,
+                "name": "עזרה ממהורים",
+                "description": null,
+                "type": "INCOME",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 83,
+                "name": "חשבון עו\"ש",
+                "active": true,
+                "debitDate": 0
+            }
+        },
+        {
+            "id": 415,
+            "actionType": "INCOME",
+            "title": "שיעור פרטי",
+            "amount": 240,
+            "actionDate": "2019-10-01",
+            "debitDate": "2019-10-01",
+            "category": {
+                "id": 26,
+                "name": "הכנסה נוספת",
+                "description": null,
+                "type": "INCOME",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 83,
+                "name": "חשבון עו\"ש",
+                "active": true,
+                "debitDate": 0
+            }
+        },
+        {
+            "id": 416,
+            "actionType": "EXPENSE",
+            "title": "קניות בסופר",
+            "amount": 120,
+            "actionDate": "2019-10-22",
+            "debitDate": "2019-10-22",
+            "category": {
+                "id": 2,
+                "name": "קניות לבית ",
+                "description": "אוכל, מוצרי ניקיון, מוצרי הגיינה",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 83,
+                "name": "חשבון עו\"ש",
+                "active": true,
+                "debitDate": 0
+            }
+        },
+        {
+            "id": 417,
+            "actionType": "EXPENSE",
+            "title": "חיסכון לחופשה",
+            "amount": 250,
+            "actionDate": "2019-10-01",
+            "debitDate": "2019-10-01",
+            "category": {
+                "id": 19,
+                "name": "חופשה",
+                "description": "",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 83,
+                "name": "חשבון עו\"ש",
+                "active": true,
+                "debitDate": 0
+            }
+        },
+        {
+            "id": 418,
+            "actionType": "EXPENSE",
+            "title": "קפה ומאפה",
+            "amount": 19,
+            "actionDate": "2019-10-01",
+            "debitDate": "2019-10-01",
+            "category": {
+                "id": 18,
+                "name": "מזומן שונות",
+                "description": "מזומן שיצא על משהו מזדמן",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 83,
+                "name": "חשבון עו\"ש",
+                "active": true,
+                "debitDate": 0
+            }
+        },
+        {
+            "id": 329,
+            "actionType": "EXPENSE",
+            "title": "קניות בסופר",
+            "amount": 431.89,
+            "actionDate": "2019-10-15",
+            "debitDate": "2019-11-10",
+            "category": {
+                "id": 2,
+                "name": "קניות לבית ",
+                "description": "אוכל, מוצרי ניקיון, מוצרי הגיינה",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 331,
+            "actionType": "EXPENSE",
+            "title": "חשבון חשמל",
+            "amount": 175.1,
+            "actionDate": "2019-10-01",
+            "debitDate": "2019-10-10",
+            "category": {
+                "id": 4,
+                "name": "חשבונות",
+                "description": "חשבון חשמל, מים, גז",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 332,
+            "actionType": "EXPENSE",
+            "title": "אקמול",
+            "amount": 75,
+            "actionDate": "2019-10-11",
+            "debitDate": "2019-11-10",
+            "category": {
+                "id": 7,
+                "name": "הוצאות רפואיות ",
+                "description": "תרופות, טיפולים שיניים, חיסונים",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 333,
+            "actionType": "EXPENSE",
+            "title": "קורס נדלן תשלום 2 מתוך 6",
+            "amount": 500,
+            "actionDate": "2019-10-01",
+            "debitDate": "2019-10-10",
+            "category": {
+                "id": 8,
+                "name": "לימודים",
+                "description": "ספרים, קורסים, ציוד למידה",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 334,
+            "actionType": "EXPENSE",
+            "title": "אזניות חדשות ",
+            "amount": 179.9,
+            "actionDate": "2019-10-17",
+            "debitDate": "2019-11-10",
+            "category": {
+                "id": 10,
+                "name": "גאדג'טים",
+                "description": "מחשב , סלולר, ציוד הקפי",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 382,
+            "actionType": "EXPENSE",
+            "title": "קניות בסופר",
+            "amount": 150,
+            "actionDate": "2019-09-01",
+            "debitDate": "2019-09-10",
+            "category": {
+                "id": 2,
+                "name": "קניות לבית ",
+                "description": "אוכל, מוצרי ניקיון, מוצרי הגיינה",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 336,
+            "actionType": "EXPENSE",
+            "title": "מנוי לחדר כושר",
+            "amount": 129,
+            "actionDate": "2019-10-01",
+            "debitDate": "2019-10-10",
+            "category": {
+                "id": 11,
+                "name": "ספורט ובריאות",
+                "description": "כולל חדר כושר, טיפולים אלטרנטיבים ועוד..",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 337,
+            "actionType": "EXPENSE",
+            "title": "מזומן בארנק לבזבוזים",
+            "amount": 250,
+            "actionDate": "2019-10-01",
+            "debitDate": "2019-10-10",
+            "category": {
+                "id": 18,
+                "name": "מזומן שונות",
+                "description": "מזומן שיצא על משהו מזדמן",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 338,
+            "actionType": "EXPENSE",
+            "title": "חיסכון ארוך טווח",
+            "amount": 500,
+            "actionDate": "2019-10-01",
+            "debitDate": "2019-10-10",
+            "category": {
+                "id": 21,
+                "name": "הפקדה לחיסכון",
+                "description": null,
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 339,
+            "actionType": "EXPENSE",
+            "title": "משקפי שמש",
+            "amount": 199.9,
+            "actionDate": "2019-10-01",
+            "debitDate": "2019-10-10",
+            "category": {
+                "id": 23,
+                "name": "ביגוד והנעלה",
+                "description": null,
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 392,
+            "actionType": "EXPENSE",
+            "title": "חשבון חשמל",
+            "amount": 230,
+            "actionDate": "2019-08-10",
+            "debitDate": "2019-09-10",
+            "category": {
+                "id": 4,
+                "name": "חשבונות",
+                "description": "חשבון חשמל, מים, גז",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 386,
+            "actionType": "EXPENSE",
+            "title": "בירה + על האש",
+            "amount": 180,
+            "actionDate": "2019-09-03",
+            "debitDate": "2019-09-10",
+            "category": {
+                "id": 1,
+                "name": "בילוים",
+                "description": "מסעדות, מסיבות, ברים",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 344,
+            "actionType": "EXPENSE",
+            "title": "קורס נדל\"ן",
+            "amount": 500,
+            "actionDate": "2019-09-22",
+            "debitDate": "2019-10-10",
+            "category": {
+                "id": 8,
+                "name": "לימודים",
+                "description": "ספרים, קורסים, ציוד למידה",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 345,
+            "actionType": "EXPENSE",
+            "title": "מגן חדש לפלאפון",
+            "amount": 198.9,
+            "actionDate": "2019-09-15",
+            "debitDate": "2019-10-10",
+            "category": {
+                "id": 10,
+                "name": "גאדג'טים",
+                "description": "מחשב , סלולר, ציוד הקפי",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 346,
+            "actionType": "EXPENSE",
+            "title": "מנוי לחדר כושר",
+            "amount": 129,
+            "actionDate": "2019-09-01",
+            "debitDate": "2019-09-10",
+            "category": {
+                "id": 11,
+                "name": "ספורט ובריאות",
+                "description": "כולל חדר כושר, טיפולים אלטרנטיבים ועוד..",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 347,
+            "actionType": "EXPENSE",
+            "title": "תדלוק",
+            "amount": 235.1,
+            "actionDate": "2019-09-01",
+            "debitDate": "2019-09-10",
+            "category": {
+                "id": 14,
+                "name": "הוצאות רכב",
+                "description": null,
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 410,
+            "actionType": "EXPENSE",
+            "title": "חשבוןגז",
+            "amount": 132,
+            "actionDate": "2019-09-01",
+            "debitDate": "2019-09-10",
+            "category": {
+                "id": 4,
+                "name": "חשבונות",
+                "description": "חשבון חשמל, מים, גז",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 350,
+            "actionType": "INCOME",
+            "title": "עזרה מאימא",
+            "amount": 1500,
+            "actionDate": "2019-09-01",
+            "debitDate": "2019-09-10",
+            "category": {
+                "id": 25,
+                "name": "עזרה ממהורים",
+                "description": null,
+                "type": "INCOME",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 356,
+            "actionType": "EXPENSE",
+            "title": "קורס בudemy",
+            "amount": 69.9,
+            "actionDate": "2019-08-19",
+            "debitDate": "2019-09-10",
+            "category": {
+                "id": 8,
+                "name": "לימודים",
+                "description": "ספרים, קורסים, ציוד למידה",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 357,
+            "actionType": "EXPENSE",
+            "title": "תשלום חבילת סלולר",
+            "amount": 39.9,
+            "actionDate": "2019-08-25",
+            "debitDate": "2019-09-10",
+            "category": {
+                "id": 16,
+                "name": "תקשורת",
+                "description": null,
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 358,
+            "actionType": "EXPENSE",
+            "title": "בושם חדש",
+            "amount": 154,
+            "actionDate": "2019-08-18",
+            "debitDate": "2019-09-10",
+            "category": {
+                "id": 23,
+                "name": "ביגוד והנעלה",
+                "description": null,
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 360,
+            "actionType": "EXPENSE",
+            "title": "תדלוק פול טנק",
+            "amount": 229.8,
+            "actionDate": "2019-08-15",
+            "debitDate": "2019-09-10",
+            "category": {
+                "id": 14,
+                "name": "הוצאות רכב",
+                "description": null,
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 364,
+            "actionType": "EXPENSE",
+            "title": "בר עם חברים",
+            "amount": 350,
+            "actionDate": "2019-08-02",
+            "debitDate": "2019-08-10",
+            "category": {
+                "id": 1,
+                "name": "בילוים",
+                "description": "מסעדות, מסיבות, ברים",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 365,
+            "actionType": "EXPENSE",
+            "title": "מסיבה בצפון",
+            "amount": 490,
+            "actionDate": "2019-08-07",
+            "debitDate": "2019-08-10",
+            "category": {
+                "id": 1,
+                "name": "בילוים",
+                "description": "מסעדות, מסיבות, ברים",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 366,
+            "actionType": "EXPENSE",
+            "title": "בירה בשוק",
+            "amount": 60,
+            "actionDate": "2019-08-09",
+            "debitDate": "2019-08-10",
+            "category": {
+                "id": 1,
+                "name": "בילוים",
+                "description": "מסעדות, מסיבות, ברים",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 368,
+            "actionType": "EXPENSE",
+            "title": "המבורגר ",
+            "amount": 59,
+            "actionDate": "2019-08-18",
+            "debitDate": "2019-09-10",
+            "category": {
+                "id": 1,
+                "name": "בילוים",
+                "description": "מסעדות, מסיבות, ברים",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 369,
+            "actionType": "EXPENSE",
+            "title": "משחק כדורגל",
+            "amount": 120,
+            "actionDate": "2019-08-23",
+            "debitDate": "2019-09-10",
+            "category": {
+                "id": 1,
+                "name": "בילוים",
+                "description": "מסעדות, מסיבות, ברים",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 370,
+            "actionType": "EXPENSE",
+            "title": "סרט ",
+            "amount": 75,
+            "actionDate": "2019-08-25",
+            "debitDate": "2019-09-10",
+            "category": {
+                "id": 1,
+                "name": "בילוים",
+                "description": "מסעדות, מסיבות, ברים",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 395,
+            "actionType": "EXPENSE",
+            "title": "תשלום 3 מתוך 12 על ביטוח רכב",
+            "amount": 130,
+            "actionDate": "2019-08-01",
+            "debitDate": "2019-08-10",
+            "category": {
+                "id": 13,
+                "name": "ביטוחים",
+                "description": null,
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 372,
+            "actionType": "EXPENSE",
+            "title": "מסיבה",
+            "amount": 280,
+            "actionDate": "2019-10-01",
+            "debitDate": "2019-10-10",
+            "category": {
+                "id": 1,
+                "name": "בילוים",
+                "description": "מסעדות, מסיבות, ברים",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 373,
+            "actionType": "EXPENSE",
+            "title": "ארוחת בוקר",
+            "amount": 115,
+            "actionDate": "2019-10-05",
+            "debitDate": "2019-10-10",
+            "category": {
+                "id": 1,
+                "name": "בילוים",
+                "description": "מסעדות, מסיבות, ברים",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 374,
+            "actionType": "EXPENSE",
+            "title": "בירה ",
+            "amount": 39.9,
+            "actionDate": "2019-10-07",
+            "debitDate": "2019-10-10",
+            "category": {
+                "id": 1,
+                "name": "בילוים",
+                "description": "מסעדות, מסיבות, ברים",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 375,
+            "actionType": "EXPENSE",
+            "title": "מסעדה",
+            "amount": 154,
+            "actionDate": "2019-10-10",
+            "debitDate": "2019-11-10",
+            "category": {
+                "id": 1,
+                "name": "בילוים",
+                "description": "מסעדות, מסיבות, ברים",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 376,
+            "actionType": "EXPENSE",
+            "title": "בירה בים",
+            "amount": 50,
+            "actionDate": "2019-10-12",
+            "debitDate": "2019-11-10",
+            "category": {
+                "id": 1,
+                "name": "בילוים",
+                "description": "מסעדות, מסיבות, ברים",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 377,
+            "actionType": "EXPENSE",
+            "title": "המבורגר",
+            "amount": 120,
+            "actionDate": "2019-10-12",
+            "debitDate": "2019-11-10",
+            "category": {
+                "id": 1,
+                "name": "בילוים",
+                "description": "מסעדות, מסיבות, ברים",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 378,
+            "actionType": "EXPENSE",
+            "title": "ישיבה בבר",
+            "amount": 89,
+            "actionDate": "2019-10-15",
+            "debitDate": "2019-11-10",
+            "category": {
+                "id": 1,
+                "name": "בילוים",
+                "description": "מסעדות, מסיבות, ברים",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 379,
+            "actionType": "EXPENSE",
+            "title": "סרט עם ברכה",
+            "amount": 59,
+            "actionDate": "2019-10-19",
+            "debitDate": "2019-11-10",
+            "category": {
+                "id": 1,
+                "name": "בילוים",
+                "description": "מסעדות, מסיבות, ברים",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 380,
+            "actionType": "EXPENSE",
+            "title": "קיר טיפוס",
+            "amount": 50,
+            "actionDate": "2019-10-20",
+            "debitDate": "2019-11-10",
+            "category": {
+                "id": 1,
+                "name": "בילוים",
+                "description": "מסעדות, מסיבות, ברים",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 383,
+            "actionType": "EXPENSE",
+            "title": "שופרסל",
+            "amount": 172.3,
+            "actionDate": "2019-09-08",
+            "debitDate": "2019-09-10",
+            "category": {
+                "id": 2,
+                "name": "קניות לבית ",
+                "description": "אוכל, מוצרי ניקיון, מוצרי הגיינה",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 384,
+            "actionType": "EXPENSE",
+            "title": "קניות לבית",
+            "amount": 232.7,
+            "actionDate": "2019-09-18",
+            "debitDate": "2019-10-10",
+            "category": {
+                "id": 2,
+                "name": "קניות לבית ",
+                "description": "אוכל, מוצרי ניקיון, מוצרי הגיינה",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 385,
+            "actionType": "EXPENSE",
+            "title": "קניות במכולת",
+            "amount": 114.9,
+            "actionDate": "2019-09-27",
+            "debitDate": "2019-10-10",
+            "category": {
+                "id": 2,
+                "name": "קניות לבית ",
+                "description": "אוכל, מוצרי ניקיון, מוצרי הגיינה",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 387,
+            "actionType": "EXPENSE",
+            "title": "משחק כדורגל",
+            "amount": 119.9,
+            "actionDate": "2019-09-08",
+            "debitDate": "2019-09-10",
+            "category": {
+                "id": 1,
+                "name": "בילוים",
+                "description": "מסעדות, מסיבות, ברים",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 388,
+            "actionType": "EXPENSE",
+            "title": "הרצאה",
+            "amount": 69.8,
+            "actionDate": "2019-09-11",
+            "debitDate": "2019-10-10",
+            "category": {
+                "id": 1,
+                "name": "בילוים",
+                "description": "מסעדות, מסיבות, ברים",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 389,
+            "actionType": "EXPENSE",
+            "title": "באולינג",
+            "amount": 250,
+            "actionDate": "2019-09-15",
+            "debitDate": "2019-10-10",
+            "category": {
+                "id": 1,
+                "name": "בילוים",
+                "description": "מסעדות, מסיבות, ברים",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 390,
+            "actionType": "EXPENSE",
+            "title": "מסעדה ",
+            "amount": 289.3,
+            "actionDate": "2019-09-21",
+            "debitDate": "2019-10-10",
+            "category": {
+                "id": 1,
+                "name": "בילוים",
+                "description": "מסעדות, מסיבות, ברים",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 391,
+            "actionType": "EXPENSE",
+            "title": "ישיבה בבר",
+            "amount": 146.1,
+            "actionDate": "2019-09-26",
+            "debitDate": "2019-10-10",
+            "category": {
+                "id": 1,
+                "name": "בילוים",
+                "description": "מסעדות, מסיבות, ברים",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 394,
+            "actionType": "EXPENSE",
+            "title": "טעינת רב קו",
+            "amount": 100,
+            "actionDate": "2019-08-20",
+            "debitDate": "2019-09-10",
+            "category": {
+                "id": 12,
+                "name": "תחבורה ציבורית",
+                "description": "אוטובוסים, מוניות ורכבות",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 396,
+            "actionType": "EXPENSE",
+            "title": "ביטוח משלים קופת חולים",
+            "amount": 49.99,
+            "actionDate": "2019-08-10",
+            "debitDate": "2019-09-10",
+            "category": {
+                "id": 13,
+                "name": "ביטוחים",
+                "description": null,
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 398,
+            "actionType": "EXPENSE",
+            "title": "תשלום 5 מתוך 12 ביטוח רכב",
+            "amount": 130,
+            "actionDate": "2019-10-10",
+            "debitDate": "2019-11-10",
+            "category": {
+                "id": 13,
+                "name": "ביטוחים",
+                "description": null,
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 400,
+            "actionType": "EXPENSE",
+            "title": "סופר",
+            "amount": 321.8,
+            "actionDate": "2019-08-22",
+            "debitDate": "2019-09-10",
+            "category": {
+                "id": 2,
+                "name": "קניות לבית ",
+                "description": "אוכל, מוצרי ניקיון, מוצרי הגיינה",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 401,
+            "actionType": "EXPENSE",
+            "title": "קניות בסופר",
+            "amount": 158.1,
+            "actionDate": "2019-08-10",
+            "debitDate": "2019-09-10",
+            "category": {
+                "id": 2,
+                "name": "קניות לבית ",
+                "description": "אוכל, מוצרי ניקיון, מוצרי הגיינה",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 403,
+            "actionType": "EXPENSE",
+            "title": "מנוי לחדר כושר",
+            "amount": 129,
+            "actionDate": "2019-08-01",
+            "debitDate": "2019-08-10",
+            "category": {
+                "id": 11,
+                "name": "ספורט ובריאות",
+                "description": "כולל חדר כושר, טיפולים אלטרנטיבים ועוד..",
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 404,
+            "actionType": "EXPENSE",
+            "title": "ביטוח משלים קופת חולים",
+            "amount": 49,
+            "actionDate": "2019-09-01",
+            "debitDate": "2019-09-10",
+            "category": {
+                "id": 13,
+                "name": "ביטוחים",
+                "description": null,
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 405,
+            "actionType": "EXPENSE",
+            "title": "ביטוח משלים קופת חולים",
+            "amount": 49.99,
+            "actionDate": "2019-10-01",
+            "debitDate": "2019-10-10",
+            "category": {
+                "id": 13,
+                "name": "ביטוחים",
+                "description": null,
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 406,
+            "actionType": "EXPENSE",
+            "title": "חניה בעיר",
+            "amount": 20,
+            "actionDate": "2019-09-18",
+            "debitDate": "2019-10-10",
+            "category": {
+                "id": 14,
+                "name": "הוצאות רכב",
+                "description": null,
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 407,
+            "actionType": "EXPENSE",
+            "title": "חניה ",
+            "amount": 25,
+            "actionDate": "2019-09-29",
+            "debitDate": "2019-10-10",
+            "category": {
+                "id": 14,
+                "name": "הוצאות רכב",
+                "description": null,
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 408,
+            "actionType": "EXPENSE",
+            "title": "בגדים לחתונה",
+            "amount": 452.9,
+            "actionDate": "2019-09-15",
+            "debitDate": "2019-10-10",
+            "category": {
+                "id": 23,
+                "name": "ביגוד והנעלה",
+                "description": null,
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        },
+        {
+            "id": 409,
+            "actionType": "EXPENSE",
+            "title": "נעליים חדשות",
+            "amount": 320,
+            "actionDate": "2019-09-14",
+            "debitDate": "2019-10-10",
+            "category": {
+                "id": 23,
+                "name": "ביגוד והנעלה",
+                "description": null,
+                "type": "EXPENSE",
+                "active": true
+            },
+            "user": {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            },
+            "methodPayment": {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        }
+    ]
+]

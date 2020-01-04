@@ -1,0 +1,21 @@
+body, span, input , div , p{
+    direction: rtl;
+}
+
+.container{
+    background:#ffffffde;
+    border: 1px solid black;
+    padding: 50px;
+    border-radius: 30px;
+}
+
+h5{
+    margin-right: 110px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: right
+}
+
+th {
+    height: 20px;
+  }

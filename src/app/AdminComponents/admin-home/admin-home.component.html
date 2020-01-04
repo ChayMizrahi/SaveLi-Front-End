@@ -1,0 +1,80 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 *ngIf="hour >= 4 &&  10 > hour  "> בוקר טוב מנהל המערכת ! <i class="fas fa-sun"></i> </h1>
+      <h1 *ngIf="hour >= 10 && 18 > hour "> אחלה צוהריים מר מנהל </h1>
+      <h1 *ngIf="hour >= 18 && 22 > hour"> ערב טוב  </h1>
+      <h1 *ngIf="hour >= 22 && 4 > hour"> חביבי לך לישון הפעם הגזמתת.. </h1>
+      <br>
+    </div>
+  </div>
+
+  <div class="container" style="background-color: #2125291a">
+
+    <div class="container" style="background-color: #21252936" *ngIf="allCustomers">
+      <h5> כרגע רשומים באתר {{allCustomers.length}} לקוחות </h5>
+      <hr>
+      <div> חמשת הלקוחות האחרונים שנרשמו לתוכנה: </div><br>
+      <table class=" table  table-striped table-hover table-sm" style="width: 70%; margin: auto">
+        <thead class="thead-dark">
+          <th scope="col">מייל</th>
+          <th scope="col"> משתמשים </th>
+          <th> אמצעי תשלום </th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of getMostNewCustomers()">
+            <td> {{c.email}}</td>
+            <td style="text-align: right">
+              <ul>
+                <li *ngFor="let u of c.users" style="text-align: right"> {{u.name}}</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li *ngFor="let mp of c.methodPayments" style="text-align: right;font-size: 75%"> <b> {{mp.name}} </b> |
+                  תאריך חיוב: {{mp.debitDate}} </li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <hr>
+      <button class="btn btn-primary btn-sm" (click)=" moveToCustomerPage()"> עבור לעמוד ניהול המשתמשים </button>
+    </div>
+
+<br>
+
+    <div class="container" style="background-color: #21252936" *ngIf="allCategories">
+        <h5> כרגע קיימות {{getAmountOfExpenesCategory()}} קטגוריות מסוג הוצאה ו{{getAmountOfIncomeCategory()}} קטגוריות מסוג הכנסה </h5>
+        <hr>
+
+        <button class="btn btn-sm" (click)="byCommon = true" [disabled]="byCommon" style="margin: 0 2px" [ngClass]="{'btn-primary' : byCommon, 'btn-light': !byCommon}" > 5 הקטגוריות הנפוצות ביותר </button>
+        <button class="btn btn-sm" (click)="byCommon = false" [disabled]="!byCommon" style="margin: 0 2px" [ngClass]="{'btn-primary' : !byCommon, 'btn-light': byCommon}"> 5 הקטגוריות שהכי פחות בשימוש </button>
+        
+        <table class=" table  table-striped table-hover table-sm" style="width: 70%; margin: auto">
+          <thead class="thead-dark">
+            <th scope="col">שם</th>
+            <th scope="col"> שימושים </th>
+          </thead>
+          <tbody *ngIf="byCommon">
+            <tr *ngFor="let c of  getMostCommon()">
+              <td> {{c.name}}</td>
+              <td > {{c.usedTotal}}</td>
+            </tr>
+          </tbody>
+          <tbody *ngIf="!byCommon">
+              <tr *ngFor="let c of  getLessCommon()">
+                <td> {{c.name}}</td>
+                <td > {{c.usedTotal}}</td>
+              </tr>
+            </tbody>
+        </table>
+        <hr>
+        <button class="btn btn-primary btn-sm" (click)=" moveToCategoryPage()"> עבור לעמוד ניהול הקטגוריות </button>
+      </div>
+
+
+  </div>
+
+</div>

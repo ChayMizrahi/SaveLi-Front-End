@@ -1,0 +1,112 @@
+.mp-details{
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 3px;
+    box-shadow: 3px 3px 2px #ccc;
+    height: auto;
+    padding: 20px;
+}
+
+.mp-details button{
+    margin-top: 15px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.mp-details input{
+    margin-top: 8px;
+    text-align: center;
+    width: 100%;
+    font-weight: 900;
+}
+
+.mp-details select{
+    display: block;
+    margin: auto;
+}
+
+.mp-details h3{
+    margin: 5px;
+    text-decoration: underline;
+}
+
+.mp-details .makeActive{
+    font-size: small;
+    padding: 0.25rem 0.5rem;
+}
+
+.mp-actions{
+ margin: auto;
+}
+
+.base-tbale-col{
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.unbase-tbale-col{
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+@media only screen and (max-width: 600px){
+    .mp-details .makeActive{
+        font-size: x-small;
+        padding: 8px;
+    }
+
+    .mp-details{
+        height: auto;
+    }
+
+    .unbase-tbale-col{
+      display: none;
+    }
+
+    .base-tbale-col{
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+}
+
+@media only screen and (max-width: 400px){
+  
+    .mp-details .makeActive{
+        font-size: x-small;
+        padding: 8px;
+    }
+
+    .mp-details{
+        height: auto;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .mp-details h3{
+        font-size: 1.25rem;
+    }
+
+    .mp-actions{
+        font-size: 80%;
+    }
+
+    .mp-actions h5{
+        width: 100%;
+        font-size: 0.75rem;
+        }
+  
+    .unbase-tbale-col{
+      display: none;
+    }
+
+    #add{
+        font-size: 80%;
+    }
+    .base-tbale-col{
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+
+  
+}

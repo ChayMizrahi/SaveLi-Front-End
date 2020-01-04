@@ -1,0 +1,158 @@
+<!-- מציג את סיכום העסקאות החודשית -->
+<div @showStete class="container p-10" *ngIf="summary?.expenses.length > 0 || summary?.incomes.length > 0">
+
+  <h1 *ngIf="byDebit" class="main-haeder" > סיכום החיובים שלך ב{{getMonthInHebrowByNumber(month)}}
+    {{year}} </h1>
+  <h1 *ngIf="!byDebit" class="main-haeder" > סיכום העסקאות שלך ב{{getMonthInHebrowByNumber(month)}}
+    {{year}} </h1>
+
+  <!--מציג את הטבלת הוצאות הכנסות:-->
+  <div *ngIf="summary" class="row">
+    <!--מציג את טבלת ההוצאות-->
+    <div *ngIf="summary.expenses.length > 0" class="col-lg-6 ">
+      <h5 class="table-title">ההוצאות שלך:</h5>
+      <table class="table table-hover table-active table-sm"
+        style="background-color: rgb(231, 250, 243); margin: auto;">
+        <thead class="thead-dark">
+          <tr>
+            <th>קטגוריה</th>
+            <th>סכום </th>
+            <th class="not-display-in-xs" *ngIf="myService.customer.users.length > 1">חלוקה</th>
+            <th>ממוצע</th>
+            <th>פירוט</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let r of summary.expenses">
+            <td>{{r.category}}</td>
+            <td> {{r.amount}} ש"ח</td>
+            <td class="not-display-in-xs" *ngIf="myService.customer.users.length > 1">
+              <span *ngFor="let d of r.division">
+                {{d.operation}} {{ displayAvg((d.amount/r.amount)*100) }} % <br>
+              </span>
+            </td>
+            <td>{{displayAvg(r.avg)}}</td>
+            <td>
+              <button class="btn btn-sm" style="padding: 0" (click)="moveToActionByCategoryAndDate(r.category)">
+                <i class="fas fa-list-ol"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+        <thead class="table-danger">
+          <tr>
+            <th> סה"כ </th>
+            <th> {{summary.totalExpense.amount}} ש"ח</th>
+            <th class="not-display-in-xs" *ngIf="myService.customer.users.length > 1">
+              <span *ngFor="let d of summary.totalExpense?.division">
+                {{d.operation}} {{ displayAvg((d.amount/summary.totalExpense.amount)*100) }} % <br>
+              </span>
+            </th>
+            <th>{{displayAvg(summary.totalExpense.avg)}}</th>
+            <th>
+              <button class="btn btn-sm" style="padding: 0" (click)="moveToActionByTypeAndDate('EXPENSE')">
+                <i class="fas fa-list-ol"></i>
+              </button>
+            </th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <!--מציג את טבלת ההכנסות-->
+    <div *ngIf="summary.incomes.length > 0" class="col-lg-6 ">
+      <h5 class="table-title"> ההכנסות שלך:</h5>
+      <table class="table table-hover table-active table-sm"
+        style="background-color: rgb(231, 250, 243); margin: auto;">
+        <thead class="thead-dark">
+          <tr style="height: 20px">
+            <th>קטגוריה</th>
+            <th>סכום </th>
+            <th class="not-display-in-xs" *ngIf="myService.customer.users.length > 1">חלוקה</th>
+            <th>ממוצע</th>
+            <th>פירוט</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let r of summary.incomes" style="height: 20px">
+            <td>{{r.category}}</td>
+            <td> {{r.amount}} ש"ח</td>
+            <td class="not-display-in-xs" *ngIf="myService.customer.users.length > 1">
+              <span *ngFor="let d of r.division">
+                {{d.operation}} {{ displayAvg((d.amount/r.amount)*100) }} % <br>
+              </span>
+            </td>
+            <td>{{displayAvg(r.avg)}}</td>
+            <td>
+              <button class="btn btn-sm" style="padding: 0" (click)="moveToActionByCategoryAndDate(r.category)">
+                <i class="fas fa-list-ol"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+        <thead class="table-success">
+          <tr>
+            <th> סה"כ </th>
+            <th>{{summary.totalIncome.amount}} ש"ח </th>
+            <th class="not-display-in-xs" *ngIf="myService.customer.users.length > 1">
+              <span *ngFor="let d of summary.totalIncome.division">
+                {{d.operation}} {{ displayAvg((d.amount/summary.totalIncome.amount)*100) }} % <br>
+              </span>
+            </th>
+            <th>{{displayAvg(summary.totalIncome.avg)}}</th>
+            <th>
+              <button class="btn btn-sm" style="padding: 0" (click)="moveToActionByTypeAndDate('INCOME')">
+                <i class="fas fa-list-ol"></i>
+              </button>
+            </th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+
+ 
+  <div *ngIf="summary">
+     <!--  מציג תרשימי פאי של ההוצאות וההכנסות כשיש מסך קטן-->
+    <div class="charst-pie-sm-screen">
+      <div *ngIf="summary.expenses.length > 1">
+        <h5 class="table-title"> התפלגות הוצאות: </h5>
+        <google-chart [data]="expensePie" style="width: auto;" type="PieChart" [options]="optionsPieSm">
+        </google-chart>
+      </div>
+
+      <div *ngIf="summary.incomes.length > 1">
+        <h5 class="table-title"> התפלגות הכנסות:</h5>
+        <google-chart [data]="incomePie" style="width: auto;" type="PieChart" [options]="optionsPieSm">
+        </google-chart>
+      </div>
+    </div>
+
+    <!--  מציג תרשימי פאי של ההוצאות וההכנסות כשיש מסך גדול-->
+    <div class="charst-pie-lg-screen row">
+      <div *ngIf="summary.expenses.length > 1" class="col-lg-6 col-md-12">
+        <h5 class="table-title"> התפלגות הוצאות: </h5>
+        <google-chart [data]="expensePie" style="width: auto;" type="PieChart" [options]="optionsPielg">
+        </google-chart>
+      </div>
+
+      <div *ngIf="summary.incomes.length > 1" class="col-lg-6 col-md-12">
+        <h5 class="table-title"> התפלגות הכנסות: </h5>
+        <google-chart [data]="incomePie" style="width: auto;" type="PieChart" [options]="optionsPielg">
+        </google-chart>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+<!--המסך שיראה המשתמש במידה והוא יגיע למסך ריק-->
+<div @showStete class="container p-10" *ngIf="summary?.expenses.length == 0 && summary?.incomes.length == 0">
+  <h3> אופס, כנראה שחלה טעות.. </h3>
+  <p> לא ביצעת עסקאות בחודש זה.. </p>
+  <button class="btn btn-danger" (click)="router.navigate(['/addExpense'])"
+    style="background-color: #ff0018c9; margin: 10px;"> הוסף הוצאה</button>
+  <button class="btn btn-success" (click)="router.navigate(['/addIncome'])"
+    style="background-color: #28a745ed; margin: 10px;"> הוסף הכנסה </button>
+</div>

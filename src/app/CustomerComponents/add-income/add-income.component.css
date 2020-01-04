@@ -1,0 +1,103 @@
+body, span, input , div , p{
+    direction: rtl
+}
+
+.container{
+    width: 70%;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+
+.box{
+   
+    margin: auto;
+    background-color:white;
+    border-radius: 30px;
+}
+
+.categories .btn{
+    height: 5vh;
+    margin: 5px 0;
+    text-align: center;
+    width: inherit;
+}
+
+.btn-outline-light {
+    color: rgba(0,0,0,.9);
+    border-color: rgba(0,0,0,.9);
+}
+
+.invalidInput{
+    color: red;
+}
+
+
+.input-area-0{
+    background-color: whitesmoke;
+    padding: 10px;
+    padding-top: 15px;
+}
+
+.input-area-up{
+    background-color: whitesmoke;
+    padding: 10px;
+    padding-top: 15px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 0;
+}
+
+.input-area-1{
+    background-color: #ede7e7;
+    padding: 10px;
+    padding-top: 15px;
+}
+
+
+
+@media only screen and (max-width: 640px){
+  .box h5, div, span, p, .btn{
+      font-size: 95%;
+     
+  }
+  .container {
+    width: 100%;
+  }
+
+  .categories .btn{
+    padding: auto;
+    font-size: 80%;
+    height: 8vh;
+}
+
+}
+
+@media only screen and (max-width: 400px){
+    .box h5, div, span, p, .btn{
+        font-size: 95%;
+       
+    }
+    .container {
+      width: 100%;
+      margin-top: 5px;
+    }
+  
+    .categories .btn{
+        font-size: 80%;
+        height: 7vh;
+        width: 17vw;
+        text-align: center;
+        padding: 0px;
+    }
+    
+    #selectMp{
+        width: 82%;
+    }
+
+    .btn-attached{
+        font-size: 70%;
+    }
+    
+  
+
+}

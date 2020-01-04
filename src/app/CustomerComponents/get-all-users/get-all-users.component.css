@@ -1,0 +1,156 @@
+.user{
+    display: table-cell;
+    border-radius: 3px;
+    width: 25%;
+    background-color: #b3e7d61f;
+    padding: 5px;
+    font-size: 80%;
+}
+
+.container{
+    background:#ffffffde;
+    border: 1px solid black;
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 30px;
+}
+
+
+.control-label{
+    padding-left: 10px;
+    
+}
+
+td{
+    word-break: break-word;
+}
+
+.invalidInput{
+    color: red;
+}
+
+.label-active{
+    padding-left: 5px;
+    padding-right:5px; 
+    background-color: #28a745;
+    color: rgb(255, 255, 255);
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    font: 400 13.3333px Arial;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    margin: 10px;
+    margin-top: auto;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.header{
+    background: #c878a4e3;
+    padding: 50px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+.label-inactive{
+    padding-left: 5px;
+    padding-right:5px; 
+    background-color: #ccc;
+    color: rgb(255, 255, 255);
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    font: 400 13.3333px Arial;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    margin: 10px;
+    margin-top: auto;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+option{
+    display: inline-block;
+}
+
+.add-box{
+    margin-top: 30px;
+}
+
+.add-box p{
+    text-align: initial;
+    padding: 5px 100px;
+}
+
+.add-box label{
+    margin-left: 10px;
+}
+
+.add-box input {
+    margin-left: 10px;
+    width: 130px;
+}
+
+.add-box h5{
+    text-decoration: underline;
+    margin: 10px auto;
+}
+
+button{
+    margin-left: 10px;
+}
+
+.inactive{
+    color: #ccc;
+}
+
+@keyframes bumb{
+0%{
+    transform: scale(1)
+}
+ 50%{
+    transform: scale(1.05);   
+}
+100%{
+    transform: scale(1)
+}
+}
+
+.form-control{
+width: 80%;
+margin: auto;
+}
+
+@media only screen and (max-width:  768px){
+
+    .user{
+        width: 100%;
+        display: inline-block;
+    }
+
+    .add-box p{
+        text-align: initial;
+        padding: 5px 20px;
+    }
+
+}
+
+
+@media only screen and (max-width:  400px){
+
+    .header{
+        padding:25px;
+    }
+
+     h1{
+        font-size: 1.75rem;
+    }
+
+}

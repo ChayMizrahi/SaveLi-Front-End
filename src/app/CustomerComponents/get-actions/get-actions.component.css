@@ -1,0 +1,251 @@
+.container{
+    background:#ffffffde;
+    border: 1px solid black;
+    padding-bottom: 20px;
+    border-radius: 30px;
+}
+
+.header {
+    background: #94b8e1;
+    padding: 35px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    margin-bottom: 26px;
+    text-decoration: underline;
+}
+
+.btn-light{
+    background-color: #93888852;
+}
+.btn-attached{
+    border: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin: auto 2px;
+  }
+
+.table-and-buttons{
+   background-color:#93888852;
+   border-radius: 30px;
+    width: 100%;
+    margin: auto;
+  }
+
+.btns-of-debit-or-not{
+    width: 100%;
+    margin: auto;
+    margin-right: 30px;
+  }
+
+.btn.disabled, .btn:disabled {
+    opacity: 1;
+}
+
+.table td input[type='date']{
+    width: 150px;
+    font-size: 100%;
+    text-align: center;
+}
+
+
+.action-date-update{
+    width: 150px;
+}
+
+.invalidInput{
+    font-size: 75%;
+    font-weight: bold;
+    color: red;
+}
+
+.amount{
+    width: 100px;
+    font-size: 100%;
+    text-align: center;
+}
+
+#mpSelect{
+    width: 100px;
+    font-size: small;
+    height: 23.8px;
+}
+
+#userSelect{
+    width: 100px;
+    font-size: small;
+    height: 23.8px;
+}
+
+#categorySelect{
+    width: 100px;
+    font-size: small;
+    height: 23.8px;
+}
+
+#balance{
+    margin: auto 10px;
+      display: inline;
+}
+
+@media only screen and (max-width:  768px){
+    .table-and-buttons{
+        background-color:#93888852;
+        border-radius: 30px;
+        width: 100%;
+      }
+
+      #balance{
+        font-size: unset;
+        margin: auto 5px;
+    }
+
+    .btns-of-debit-or-not{
+        width: 100%;  
+    }
+
+    .not-display-in-xs{
+        display: none;
+    }
+
+    .table .btn{
+        padding: 0;
+    }
+
+    .table td{
+        font-size: 80%;
+        padding: 2px 2px;
+        width: auto;
+    }
+
+    .table th{
+        padding: 2px 2px;
+        width: auto;
+    }
+
+    th {
+        font-size: 80%;
+    }
+
+    #title{
+        display: none;      
+    }
+
+    #category{
+        width: 50px;
+        font-size: 60%
+    }
+
+    #categorySelect{
+        width: 55px;
+        font-size: small;
+        height: 23.8px;
+    }
+
+    
+
+    .buttons-top-table .btn{
+        font-size: 65%;
+        font-weight: bold;
+    }
+
+    .table td input[type='date']{
+        width: 70px;
+        font-size: 82%;
+        text-align: center;
+    }
+
+    .amount{
+        width: 40px;
+        font-size: 100%;
+        text-align: center;
+    }
+
+    #mpSelect{
+        width: 60px;
+        font-size: small;
+        height: 23.8px;
+    }
+
+    #userSelect{
+        width: 51px;
+        font-size: small;
+        height: 23.8px;
+    }
+
+
+    input[type="date"]::-webkit-calendar-picker-indicator{
+        display: none;
+    }
+    input[type="number"]::-webkit-calendar-picker-indicator{
+        display: none;
+    }
+    input[type="date"]::-webkit-inner-spin-button {
+        display: none;
+    }
+    input[type="number"]::-webkit-inner-spin-button {
+        display: none;
+    }
+
+    #sort-text{
+        width: 56px;
+    }
+}
+
+@media only screen and (max-width:  400px){
+
+    .table-sm td, th{
+        font-size: 60%;
+    }
+
+    .table-sm .btn{
+        font-size: 90%;
+    }
+
+    .table-sm i {
+        font-size: 90%;
+    }
+
+    .btns-of-debit-or-not .btn{
+        font-size: 65%; 
+    }
+    
+    .table td input[type='date']{
+        width: 50px;
+        font-size: 70%;
+        
+        text-align: center;
+    }
+
+    .buttons-top-table .btn{
+        font-size: 60%;
+    }
+
+    .buttons-top-table select{
+        width: 50%;
+    }
+    
+    #mpSelect{
+        width: 27px;
+        font-size: small;
+        height: 23.8px;
+    }
+
+    #userSelect{
+        width: 27px;
+        font-size: small;
+        height: 23.8px;
+    }
+
+    #categorySelect{
+        width: 27px;
+        font-size: small;
+        height: 23.8px;
+    }
+
+    .amount{
+        width: 30px;
+        font-size: 70%;
+        text-align: center;
+    }
+
+}

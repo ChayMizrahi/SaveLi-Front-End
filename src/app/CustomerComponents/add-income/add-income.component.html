@@ -1,0 +1,224 @@
+<div class="container box" @showStete *ngIf="activeUsers && activeMethodPayments && categories && myService.allActions">
+
+  <div class="row" *ngIf="(activeUsers[0]==null) || (activeMethodPayments[0]==null) || (categories.length == 0) ">
+
+    <!--יופיע במקרה בו אים משתמשים פעילים-->
+    <div class="col-12" style="padding: 25px;" *ngIf="(!activeUsers.length)">
+      <h5> אופס.. אין אפילו משתמש פעיל אחד <i class="fas fa-meh-rolling-eyes"></i> </h5>
+      <p> צריך רק משתמש פעיל אחד כדי לתעד עסקה, עבור אל עמוד ניהול המשתמשים וטפל בעיניניים <i
+          class="far fa-grin-tongue-squint"></i> </p>
+      <button class="btn btn-primary" (click)="moveToUserPage()"> תקן עכשיו <i class="fas fa-wrench"></i> </button>
+    </div>
+
+    <!--יופיע במקרה בו אין אמצעי תשלום פעילים-->
+    <div class="col-12" style="padding: 25px;" *ngIf="(!activeMethodPayments.length)">
+      <h5>אופס... אין ברשותך אמצעי תשלום פעילים <i class="far fa-grin-beam-sweat"></i> </h5>
+      <p> על מנת לתעד הוצאות / הכנסות חייבים להגדיר לפחות אמצעי תשלום אחד פעיל.. </p>
+      <button class="btn btn-primary" (click)="moveToMethodPaymenyPage()"> תקן עכשיו <i class="fas fa-wrench"></i>
+      </button>
+    </div>
+
+    <!--יופיע במקרה בו לא קיימות קטגוריות מהסוג המוגדר.-->
+    <div class="col-12" *ngIf="categories.length == 0">
+      <h3> טעות שלנו <i class="fas fa-bomb"></i> </h3>
+      <p> יש לנו בעיה קטנה, אנחנו עובדים על זה </p>
+      <p> נסה שוב מאוחר יותר... </p>
+    </div>
+
+  </div>
+
+  <div @showStete *ngIf="(activeUsers.length > 0) && (activeMethodPayments.length > 0) && (categories.length > 0)">
+    <!--The row with the options: income or expense.-->
+    <div class="row input-area-up">
+      <div class="col-12"
+        style="background-color: #2abd3b ;border-top-right-radius: 30px;border-top-left-radius: 30px;    padding: 10px;">
+        <h5 style="text-decoration: underline;"> הוסף הכנסה חדשה </h5>
+        <p *ngIf="incomeThisMonth > 0 && incomeNextMonth > 0">
+          עד כה תיעדת הכנסות שבוצעו בחודש זה בסכום של {{DisplayAvg(totleIncome)}} ש"ח.
+          מתוך סכום זה {{DisplayAvg(incomeThisMonth)}}
+          ש"ח יופיעו בחשבונך בחודש זה ו-{{DisplayAvg(incomeNextMonth)}}
+          ש"ח יתווספו אל חשבונך בחודש הבא.
+        </p>
+        <hr>
+        <p> רוצה בכלל להוסיף הוצאה ? <br> עבור אל עמוד הוספת ההוצאות.. </p>
+        <button class="btn btn-outline-light" (click)="moveToExpensePage()"> עבור <i
+            class="fas fa-angle-double-left"></i> </button>
+      </div>
+    </div>
+
+    <!--Select the user:-->
+    <div class="row input-area-1">
+      <div class="col-6" style="padding: 10px;">
+        <div> מי המשתמש שאחראי <br> על ההכנסה? <i class="fas fa-user-tie"></i> </div>
+        <select [(ngModel)]="action.user.id">
+          <option [value]="u.id" *ngFor="let u of activeUsers"> {{u.name}} </option>
+        </select>
+      </div>
+
+      <div class="col-6" style="padding: 10px;">
+        <div> לאיזה אמצעי תשלום <br> הכסף יופקד ? <i class="fas fa-wallet"></i> </div>
+        <select [(ngModel)]="action.methodPayment.id" id="selectMp" [ngModelOptions]="{standalone: true}">
+          <option [value]="mp.id" *ngFor="let mp of activeMethodPayments" [selected]="action.methodPayment.id == mp.id">
+            {{mp.name}} </option>
+        </select>
+      </div>
+      <hr>
+    </div>
+
+    <div class="row input-area-0">
+      <div class="col-12" style="margin-bottom: 10px; text-decoration: underline"> סמן את הקטגוריה אליה תהייה משוייכת
+        ההכנסה: </div>
+      <div class="col-3 categories" *ngFor="let c of categories">
+        <button class="btn"
+          [ngClass]="{'btn-primary': action.category.id == c.id , 'btn-dark': action.category.id != c.id}"
+          (click)="selectCategory(c)"> {{c.name}} </button>
+      </div>
+      <hr>
+    </div>
+
+    <div class="row input-area-1">
+      <div class="col-12">
+        <span> סכום ההכנסה בשקלים <i class="fas fa-shekel-sign"></i> : </span>
+        <input type="text" pattern="[0-9]+" [(ngModel)]="action.amount" maxlength="5" #amount="ngModel" step="1" required
+          min="1" pattern="^[+]?\d+([.]\d+)?$">
+        <div class="invalidInput" *ngIf="amount.errors?.required && amount.touched"> חובה לרשום את סכום
+          ההכנסה <i class="fas fa-exclamation"></i>
+        </div>
+        <div class="invalidInput" *ngIf="amount.errors?.pattern && amount.touched"> סכום ההכנסה חייב להיות
+          חיובי <i class="fas fa-exclamation"></i>
+        </div>
+      </div>
+      <hr>
+    </div>
+
+    <div class="row input-area-0">
+      <div class="col-12">
+        <span> בחר את התאריך בו בוצעה הפעולה <i class="far fa-calendar-plus"></i> : </span>
+        <input type="date" [(ngModel)]="action.actionDate" #date="ngModel" name="date" required
+          placeholder="הוסף את תאריך ההכנסה">
+        <div class="invalidInput" *ngIf="date.errors?.required && date.touched"> שדה זה הוא חובה <i
+            class="fas fa-exclamation"></i> </div>
+      </div>
+      <hr>
+    </div>
+
+    <div class="row input-area-1">
+      <div class="col-12">
+        <input type="text" [(ngModel)]="action.title" style="width: 95%; text-align: center;" maxlength="100"
+          placeholder="   רשום כמה מילים על ההכנסה , אם בא לך ;)">
+      </div>
+      <hr>
+    </div>
+
+    <div class="row input-area-0" style="border-bottom-right-radius: 30px; border-bottom-left-radius: 30px;">
+      <div class="col-12">
+        <button class="btn btn-warning" [disabled]="amount.invalid" (click)="addIncome()"> תעד <i
+            class="fas fa-folder-plus"></i> </button>
+      </div>
+      <hr>
+    </div>
+  </div>
+
+</div>
+
+
+<!--<div class="container">
+
+  <div class="row" *ngIf="activeUsers && activeMethodPayments && categories">
+    <div class="col-sm-12">
+
+      <div *ngIf=" (activeUsers.length == 0) || (activeMethodPayments.length == 0) || (categories.length == 0) ">
+        <div *ngIf="(activeUsers.length == 0)">
+          <h5> אינך יכול להשלים את הפעולה </h5>
+          <p> כל המשתמשים ברשותך אינם פעילים, אנא עבור אל עמוד ניהול המשתמשים וצור משתמש חדש או הפוך משתמש ישן לפעיל
+          </p>
+          <button class="btn btn-primary" (click)="moveToUserPage()"> עבור </button>
+        </div>
+
+        <div *ngIf="(activeMethodPayments.length == 0)">
+          <h5> לא ניתן להשלים את הפעולה </h5>
+          <p> כל אמצעי התשלום שברשותך אינם פעילים, אנא עבור אל עמוד ניהול אמצעי התשלום וצור אמצעי תשלום חדש או הפוך
+            אמצעי תשלום ישן לפעיל </p>
+          <button class="btn btn-primary" (click)="moveToMethodPaymenyPage()"> עבור </button>
+        </div>
+
+        <div *ngIf="categories.length == 0">
+          <h5> עקב תקלה במערכת לא ניתן להשלים את הפעולה, אנא נסה מאוחר יותר </h5>
+        </div>
+      </div>
+
+
+      <div class="box" *ngIf="(activeUsers.length > 0) && (activeMethodPayments.length >0) && (categories.length>0)">
+        <h1>ברוך הבא לעמוד הוספת הכנסות</h1>
+        <p>כדי שנוכל לעקוב אחר הוצאות שלך בצורה הטובה ביותר אנא מלא את השדות במלואן</p>
+        <hr>
+        <div>
+          <h5>בחר את המשתמש עליו תהייה רשומה ההכנסה:</h5>
+          <button (click)="selectUser(u)" *ngFor="let u of activeUsers" style="margin: 1px 10px"
+            [ngClass]="{ 'selected' : action.operation == u.name }" class="btn btn-black btn-sm">
+            {{u.name}} </button>
+          <div> {{userMessage}} </div>
+          <hr>
+        </div>
+
+        <div>
+          <h5>בחר את אמצע יהתשלום דרכו התקבלה ההכנסה: </h5>
+          <button (click)="selectMethodPayment(mp)" *ngFor="let mp of activeMethodPayments" style="margin: 5px 8px"
+            [ngClass]="{ 'selected' : action.methodPayment.id == mp.id }" class="btn btn-warning btn-sm"> {{mp.name}}
+          </button>
+          <div> {{mpMessage}} </div>
+          <hr>
+        </div>
+
+        <div>
+          <h5> שייך את ההכנסה לקטגוריה:</h5>
+          <button *ngFor="let c of categories" (click)="selectCategory(c)" class="btn btn-success btn-sm"
+            style="margin: 1px 10px; width: 150px;  height: 35px;"
+            [ngClass]="{ 'selected' : action.category == c.name }">
+            {{c.name}} </button>
+          <div> {{categoryMessage}} </div>
+          <hr>
+        </div>
+
+        <form #formInfo="ngForm">
+
+          <div class="form-group">
+            <label class="control-label" for="title"> מה כותרת ההכנסה ? </label>
+            <input #titleInfo="ngModel" id="title" type="text" maxlength="150" required [(ngModel)]="action.title"
+              name="title" placeholder="תן כותרת להכנסה">
+          </div>
+
+
+          <div class="form-group">
+            <label class="control-label" for="amount"> מה סכום ההכנסה ? </label>
+            <input type="number" #amountInfo="ngModel" step="0.01" required min="0" pattern="^[+]?\d+([.]\d+)?$"
+              [(ngModel)]="action.amount" name="amount" placeholder="הכנס את סכום ההכנסה"><br>
+            <div class="invalidInput" *ngIf="amountInfo.errors?.required && amountInfo.touched"> חובה לרשום את סכום
+              ההכנסה
+            </div>
+            <div class="invalidInput" *ngIf="amountInfo.errors?.pattern && amountInfo.touched"> סכום ההכנסה חייב להיות
+              חיובי
+            </div>
+          </div>
+
+          <div>
+            <label class="control-label" for="amount"> תאר את ההכנסה:</label>
+            <input type="text" [(ngModel)]="action.description" maxlength="250" name="description"
+              placeholder="תן תיאור להכנסה">
+          </div>
+
+
+          <div>
+            <br>
+            <label class="control-label" for="amount"> מתי בוצעה ההכנסה ? </label>
+            <input type="date" [(ngModel)]="action.actionDate" name="date" placeholder="הוסף את תאריך ההכנסה">
+          </div>
+
+          <button [disabled]="formInfo.form.invalid" class="btn btn-primary" (click)="addIncome()"> הוסף! </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+-->

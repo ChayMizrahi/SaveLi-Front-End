@@ -1,0 +1,52 @@
+<div class="container p-0">
+
+  <div class="header">
+    <h1> הגדרות </h1>
+  </div>
+
+  <div @showStete *ngIf="myCustomer">
+
+    <div class="inputArea" *ngIf="loginService.allEmails">
+
+      <form #formInfo="ngForm">
+        <label> עדכן את כתובת המייל שלך: </label>
+        <input #email="ngModel" name="email" [(ngModel)]="changeEmail" type="email" [placeholder]="myCustomer.email"
+          pattern="[^@]+@[^\.]+\..+" maxlength="50" (input)="checkIfEmailUniqe()" required>
+
+        <div class="invalidInput" *ngIf="email.errors?.pattern && email.touched"> כתובת המייל אינה תקינה </div>
+        <div class="invalidInput" *ngIf="email.errors?.required && email.touched"> חובה למלא שדה זה </div>
+        <div class="invalidInput" *ngIf="emailNotUniqe && email.touched && email.valid"> כתובת המייל תפוסה </div>
+
+        <button class="btn btn-primary btn-sm" [disabled]="formInfo.form.invalid || emailNotUniqe"
+          (click)="updateEmail()">עדכן כותבת מייל</button>
+      </form>
+    </div>
+
+
+    <div class="inputArea">
+      <h5>עדכן סיסמה:</h5>
+      <form #passwordForm="ngForm">
+        <label> הזן סיסמה חדשה: </label><br>
+        <input class="form-control" pattern="^.{2,8}$" #first="ngModel" [(ngModel)]="firstPassword" name="firstPassword"
+          maxlength="8" required type="password">
+
+        <label> אמת סיסמה חדשה: </label><br>
+        <input class="form-control" pattern="^.{2,8}$" #second="ngModel" [(ngModel)]="secondPassword" maxlength="8"
+          name="secondPassword" type="password" required>
+
+        <div @showStete class="invalidInput"
+          *ngIf="(firstPassword != secondPassword) && (first.touched) && (second.touched)"> סיסמאות אינם תואמות </div>
+
+        <button class="btn btn-primary btn-sm" [disabled]="firstPassword != secondPassword || passwordForm.form.invalid"
+          (click)="updatePassword()"> עדכן הסיסמה
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="inputArea">
+    <button class="btn btn-danger" (click)="removeCustomer()"> מחק את המשתמש לגמרי</button>
+    <p> שיב <i class="fas fa-heart"></i> : אם תמחק את המשתמש כל הפעולות שנרשמו על שמו ימחקו לצמיתות ולא תוכל לשחזרם</p>
+  </div>
+
+</div>

@@ -1,0 +1,280 @@
+
+<div class="container" *ngIf="allActions">
+
+  <!-- הכותרת שתוצג בתחילת העמוד -->
+  <div class="row">
+    <div class="col-sm-12 header">
+      <h1 *ngIf="(type=='all')"> ניהול הפעולות </h1>
+      <h1 *ngIf="(type=='user')">הפעולות שנרשמו על שמו של {{getEntityName()}}</h1>
+      <h1 *ngIf="(type=='methodPayment')"> הפעולות שבוצעו באמצעות {{getEntityName()}}</h1>
+      <h1 *ngIf="type=='category'">הפעולות שנרשמו תחת הקטגוריה {{getEntityName()}}</h1>
+      <h1 *ngIf="type=='type'">הפעולות שנרשמו כ{{getEntityName()}}</h1>
+      <br>
+    </div>
+  </div>
+
+  <div *ngIf="actionsToDisplay.length == 0">
+    <h3>לא תועדו פעולות</h3>
+  </div>
+
+  <div *ngIf="actionsToDisplay.length > 0">
+    <!-- הכפתורים לבחירה בין הצגה לפי חיוב או ביצוע -->
+    <div class="row btns-of-debit-or-not">
+      <!-- הכפתור המאפשר הצגה על פי תאריך חיוב -->
+      <div >
+        <button class="btn btn-attached btn-sm" [disabled]="byDebit"
+          [ngClass]="{'btn-primary': byDebit, 'btn-light' : !byDebit}" (click)="changeTheDisplayOfTheActions()"> הצג על
+          פי
+          תאריך החיוב</button>
+      </div>
+      <!-- הכפתור המאפשר הצגה על פי תאריך ביצוע -->
+      <div >
+        <button class="btn btn-attached btn-sm" [disabled]="!byDebit"
+          [ngClass]="{'btn-primary': !byDebit, 'btn-light' : byDebit}" (click)="changeTheDisplayOfTheActions()"> הצג על
+          פי תאריך ביצוע </button>
+      </div>
+    </div>
+
+    <!-- מכיל את הטבלה ואת האופציות שינוי הצגת הטבלה -->
+    <div class="table-and-buttons">
+
+      <!-- מכיל כפתור לשינוי התאריכים וכפתורים להוספת פעולות -->
+      <div class="row buttons-top-table " *ngIf="activeMonthsAndYears" style="padding: 15px;">
+        <!-- מציג ללקוח אופציה של כל החודשיים בהם קיימים פעולות של המשתמש. -->
+        <div class="col-6">
+          <select #select style="float: right; margin-top: 5px; margin-right: 18px;">
+            <option *ngFor="let m of activeMonthsAndYears"  [selected]="m.year == year && m.month == month">
+              {{getMonthInHebrowByNumber(m.month)}} {{m.year}} </option>
+          </select>
+          <!-- בעת לחיצה על הכפור ישנו הנתונים שיוצגו ללקוח עך פי החודש והשנה שנבחרו -->
+          <button class="btn btn-primary btn-sm" style="padding:1px 5px; margin:5px;float: right; "
+            (click)="changeYearMonth(select.value)"> הצג </button>
+        </div>
+        <!-- מאפשר הוספת פעולה חדשה בהתאם לסוג המשתנה עיו מוצגת הפעולות:-->
+        <!-- הוספת פעולה חדשה על שם הקטגוריה שמוצגת: -->
+
+        <div *ngIf="type == 'category' && !ifTheEntityUnactive() && posibaleToAddAction()" class="col-6">
+          <button class="btn btn-sm" (click)="addActionByType(theEntity.type)"
+            [ngClass]="{'btn-danger': theEntity.type=='EXPENSE', 'btn-success':theEntity.type =='INCOME' }"> הוסף
+            פעולה על שם {{theEntity.name}} </button>
+        </div>
+        <!-- הוספת פעולה חדשה במקרה ומוצגת הפעולות של אמצעי תשלום או משתמש: -->
+        <div *ngIf="(type == 'user' || type=='methodPayment') && !ifTheEntityUnactive() && posibaleToAddAction()"
+          class="col-3">
+          <button class="btn btn-danger btn-sm" (click)="addActionByType('EXPENSE')"> הוסף
+            הוצאה
+          </button>
+        </div>
+        <div *ngIf="(type == 'user' || type=='methodPayment') && !ifTheEntityUnactive() && posibaleToAddAction()"
+          class="col-3">
+          <button class="btn btn-success btn-sm" (click)="addActionByType('INCOME')"> הוסף
+            הכנסה
+          </button>
+        </div>
+        <!-- הוספת פעולה חדשה בהתאם לסוג הפעולה שנבחרה על ידי הלקוח -->
+        <div *ngIf="(type == 'type' && id == 'INCOME') && posibaleToAddAction()" class="col-6">
+          <button (click)="addActionByType('INCOME')" class="btn btn-success btn-sm"> הוסף הכנסה </button>
+        </div>
+        <div *ngIf="(type == 'type' && id == 'EXPENSE') && posibaleToAddAction()" class="col-6">
+          <button (click)="addActionByType('EXPENSE')" class="btn btn-danger btn-sm"> הוסף הוצאה </button>
+        </div>
+        <div *ngIf="!posibaleToAddAction()" class="col-6">
+          <span class="invalidInput" style="margin-top: 10px;"> לא קיימים משתמשים ו/או אמצעי תשלום פעילים </span>
+        </div>
+        
+          <div class="col-3" *ngIf="posibaleToAddAction() && type=='all'">
+            <button class="btn btn-danger btn-sm" (click)="addActionByType('EXPENSE')"> הוסף
+              הוצאה
+            </button>
+          </div>
+          <div class="col-3" *ngIf="posibaleToAddAction() && type=='all'">
+            <button class="btn btn-success btn-sm" (click)="addActionByType('INCOME')"> הוסף
+              הכנסה
+            </button>
+          </div>
+        
+      </div>
+
+      <div>
+        <!-- הצגה של הפעולות הממויינות על פי הנתונים שנבחרו -->
+        <div *ngIf="actionsToDisplay">
+          <div class="row" style="background-color:#93888852;margin: auto 0;" *ngIf=" (actionsToDisplay.length > 0) ">
+            <table class="table table-hover table-sm">
+              <!-- הכותרות של הטבלה -->
+              <thead>
+                <tr>
+                  <th> <button class="btn" (click)="sortAction('actionDate')"><b> בוצע </b></button> </th>
+                  <th> <button class="btn" (click)="sortAction('debitDate')"><b> חיוב </b></button> </th>
+                  <th> <button class="btn" (click)="sortAction('amount')"><b> סכום</b></button> </th>
+                  <th class="not-display-in-xs"> <button class="btn" (click)="sortAction('title')"><b> תיאור
+                      </b></button> </th>
+                  <th *ngIf="type != 'category'"> <button class="btn" (click)="sortAction('category')"><b> קטגוריה
+                      </b></button> </th>
+                  <th  *ngIf="type != 'methodPayment'"> <button class="btn" [disabled]="true"> <b>באמצעות</b> </button> </th>
+                  <th *ngIf="(type != 'user')"> <button class="btn" [disabled]="true"> <b>ע"י</b> </button> </th>
+                  <th>  <button class="btn" [disabled]="true"> <b> מחק </b></button> </th>
+                  <th> <button class="btn" [disabled]="true"> <b> ערוך</b></button> </th>
+                </tr>
+              </thead>
+              <!-- תוכן הטבלה -->
+              <tbody>
+                <!-- השורה שתוצג למשתמש לאחר שהפעיל את אחד הכפתורים להוספת פעולה חדשה-->
+                <tr @showStete *ngIf="addAction"
+                  [ngStyle]="{'background-color': (actionToAdd.actionType=='INCOME') ? '#28a7459c' : '#ff000045'}">
+                  <!-- הגדרת תאריך ביצוע הפעולה: -->
+                  <td> <input type="date" required [(ngModel)]="actionToAdd.actionDate">
+                    <!-- ההודעה שתוצד למשתמש במידהב והתאריל שהוא הזין לא תקין -->
+                    <div class="invalidInput"> {{megActionDate}} </div>
+                  </td>
+                  <!-- השורה בה מופיע תאריך החיוב, אשר מוגדר אוטומטית ואין צורך להזין נתונים. -->
+                  <td> אוטומטי </td>
+                  <!-- השורה בה המשתמש יוכל להזין את סכום הפעולה -->
+                  <td>
+                    <input type="number" class="amount" pattern="[0-9]+" max="999999" min="0" required placeholder="סכום"
+                      [(ngModel)]="actionToAdd.amount">
+                    <!-- ההודעה שתוצג למשתמש במידה והוא השאיר את הסכום ריק-->
+                    <div class="invalidInput"> {{megAmountNull}} </div>
+                    <!-- הודעה שתוצג למשתמש במידה והסכום שהוא הזין הוא שלילי -->
+                    <div class="invalidInput"> {{megAmountNegetive}} </div>
+                  </td>
+                  <!-- השורה בה המשתמש יוכל להזין תיאור של הפעולה. -->
+                  <td class="not-display-in-xs"> <input type="text" maxlength="70" required style="width: auto"
+                      placeholder="כותרת הפעולה" [(ngModel)]="actionToAdd.title">
+                  </td>
+                  <!-- השורה בה המשתמש יבחר את הקטגוריה אליה שייכת הפעולה -->
+                  <td *ngIf="type != 'category'">
+                    <!-- הקטגוריות שיוצגו למשתמש אם בחר להוסיף הוצאה -->
+                    <select id="categorySelect" *ngIf="(actionToAdd.actionType == 'EXPENSE') "
+                      [(ngModel)]="actionToAdd.category.id" [ngModelOptions]="{standalone: true}">
+                      <option *ngFor="let c of categoriesOfExpense" [value]="c.id"
+                        [selected]="c.id == actionToAdd.category.id">
+                        {{c.name}} </option>
+                    </select>
+                    <!-- הקטגוריות שיוצגו למשתמש אם בחר להוסיף הכנסה -->
+                    <select id="categorySelect" *ngIf="(actionToAdd.actionType == 'INCOME')"
+                      [(ngModel)]="actionToAdd.category.id" [ngModelOptions]="{standalone: true}">
+                      <option *ngFor="let c of categoriesOfIncome" [value]="c.id"
+                        [selected]="c.id == actionToAdd.category.id">
+                        {{c.name}} </option>
+                    </select>
+                  </td>
+                  <!-- אמצעי התשלום שיוגו למשתמש כאופציות -->
+                  <td *ngIf="type != 'methodPayment'">
+                    <select id="mpSelect" [(ngModel)]="actionToAdd.methodPayment.id">
+                      <option [value]="m.id" *ngFor="let m of getActiveMethodPayment()"
+                        [selected]="actionToAdd.methodPayment.id == m.id">
+                        {{m.name}}</option>
+                    </select>
+                  </td>
+                  <!-- המתמשים שיוכל הלקוח לשייך אליהם את העסקאה החדשה שיוסיף -->
+                  <td *ngIf="(type != 'user')">
+                    <select id="userSelect" [(ngModel)]="actionToAdd.user.id">
+                      <option *ngFor="let u of getActiveUsers()" [value]="u.id"
+                        [selected]="actionToAdd.user.name == u.name">
+                        {{u.name}} </option>
+                    </select>
+                  </td>
+                  <!-- כפתור המאפשר ביטול של הוספת עסקה חדשה -->
+                  <td> <button class="btn" (click)="addAction = false"> <i class="far fa-times-circle"> </i> </button>
+                  </td>
+                  <!-- הכפתור איתו מסיימים את הגשת העסקה -->
+                  <td> <button class="btn" (click)="finishAdd()"> <i class="far fa-check-circle"> </i> </button> </td>
+                </tr>
+
+                <!--Display action:-->
+                <tr @showStete *ngFor="let a of actionsToDisplay; let i = index"
+                  [ngStyle]="{'background-color': (a.actionType == 'INCOME' ) ? 'rgba(40, 167, 69, 0.61)' : 'rgba(255, 0, 0, 0.27)'}">
+                  <td *ngIf="makeUpdate != i"> {{displayDateHebrow(a.actionDate)}} </td>
+                  <td *ngIf="makeUpdate != i"> {{displayDateHebrow(a.debitDate)}} </td>
+                  <td *ngIf="makeUpdate != i"> {{a.amount}} ש"ח </td>
+                  <td class="not-display-in-xs" *ngIf="makeUpdate != i" style="word-break: break-word;"> {{a.title}} </td>
+                  <td *ngIf="type!='category' && makeUpdate != i" style="word-break: break-word;"> {{a.category.name}}
+                  </td>
+                  <td *ngIf="type!='methodPayment' && makeUpdate != i" style="word-break: break-word;" id="sort-text">
+                    {{a.methodPayment.name}} </td>
+                  <td *ngIf="type!='user' && makeUpdate != i " style="word-break: break-word;" id="sort-text">
+                    {{a.user.name}} </td>
+                  <td *ngIf="makeUpdate != i"> <button class="btn" (click)="removeAction(a.id)"> <i
+                        class="far fa-trash-alt"></i> </button> </td>
+                  <td *ngIf="makeUpdate != i "> <button class="btn" (click)="startUpdate(i)"> <i
+                        class="fas fa-edit"></i>
+                    </button> </td>
+
+                  <!--מציג את הפעולה לאחר שנבחרה לעבור עדכון-->
+                  <td class="action-date-update" *ngIf="makeUpdate === i"> <input type="date" required
+                      [(ngModel)]="actionToUpdate.actionDate"> </td>
+
+                  <td *ngIf="makeUpdate === i"> {{displayDateHebrow(a.debitDate)}}</td>
+
+                  <td *ngIf="makeUpdate === i"> <input class="amount" pattern="\d*" maxlength="6" min="0" type="text" [(ngModel)]="actionToUpdate.amount">
+                    <!-- ההודעה שתוצג למשתמש במידה והוא השאיר את הסכום ריק-->
+                    <div class="invalidInput"> {{megAmountNull}} </div>
+                    <!-- הודעה שתוצג למשתמש במידה והסכום שהוא הזין הוא שלילי -->
+                    <div class="invalidInput"> {{megAmountNegetive}} </div>
+                  </td>
+
+                  <td id="title" *ngIf="makeUpdate === i"><input type="text" maxlength="70" [(ngModel)]="actionToUpdate.title"> </td>
+
+                  <td id="category" *ngIf="makeUpdate === i && (type !='category')">
+
+                    <select id="categorySelect" #actionToUpdateCategory *ngIf="(a.actionType == 'EXPENSE')"
+                      [(ngModel)]="actionToUpdate.category.id" [ngModelOptions]="{standalone: true}">
+                      <option *ngFor="let c of categoriesOfExpense" [value]="c.id"
+                        [selected]="actionToUpdate.category.id == c.id">
+                        {{c.name}} </option>
+                    </select>
+
+
+                    <select id="categorySelect" #actionToUpdateCategory *ngIf="(a.actionType == 'INCOME')"
+                      [(ngModel)]="actionToUpdate.category.id" [ngModelOptions]="{standalone: true}">
+                      <option *ngFor="let c of categoriesOfIncome" [value]="c.id"
+                        [selected]="actionToUpdate.category.id == c.id"> {{c.name}} </option>
+                    </select>
+                  </td>
+
+                  <td *ngIf="makeUpdate === i && type!='methodPayment'">
+                    <select id="mpSelect" [(ngModel)]="actionToUpdate.methodPayment.id"
+                      [ngModelOptions]="{standalone: true}">
+                      <option [value]="m.id" *ngFor="let m of allMethodPayment"
+                        [selected]="actionToUpdate.methodPayment.id == m.id">
+                        {{m.name}}</option>
+                    </select>
+                  </td>
+
+
+                  <td *ngIf="makeUpdate === i && type !='user'">
+                    <select id="userSelect" [(ngModel)]="actionToUpdate.user.id" [ngModelOptions]="{standalone: true}">
+                      <option *ngFor="let u of allUsers" [value]="u.id" [selected]="actionToUpdate.user == u">
+                        {{u.name}} </option>
+                    </select>
+                  </td>
+
+                  <td *ngIf="makeUpdate === i "><button class="btn" (click)="cancelUpdate()"> <i
+                        class="far fa-times-circle"> </i> </button></td>
+                  <td *ngIf="makeUpdate === i"><button class="btn" (click)="finishUpdate()"> <i
+                        class="far fa-check-circle"> </i> </button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div style="padding: 10px;">
+            <div id="balance" *ngIf="sumExpense !=0">
+              <b> סך הוצאות:</b> {{displayAvg(sumExpense)}} ש"ח
+            </div>
+            <div id="balance" *ngIf="sumIncome !=0 " >
+              <b> סך הכנסות:</b> {{displayAvg(sumIncome)}} ש"ח
+            </div>
+            <div id="balance" *ngIf="sumIncome !=0 && sumIncome != 0 ">
+              <b> מאזן:</b> {{displayAvg(sumIncome - sumExpense)}} ש"ח
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="actionsToDisplay.length == 0">
+    <h4> כנראה שאין עסקאות מתועדת התואמות לחיפוש שלך.. </h4>
+  </div>
+
+</div>

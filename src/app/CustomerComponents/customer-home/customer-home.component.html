@@ -1,0 +1,182 @@
+<div class="container" *ngIf="!allActions">
+
+  <div *ngIf="!problem">
+    <img src="assets\image\loading3.gif" style="width: 200px; height: 180px; margin: 21px;">
+    <div> העמוד בטעינה.... </div>
+  </div>
+
+  <div *ngIf="problem">
+    <img src="assets\image\error.png " style="width: 200px; height: 180px; margin: 21px;">
+    <div> לקוח יקר קיימת בעיה בטעינת העמוד, אנא נסה במועד אחר </div>
+  </div>
+
+</div>
+
+<!--המיכל הראשי, יופיע אחרי שהלקוח יטען בשרת הלקוחות-->
+<div class="container" *ngIf="myService.customer && allActions">
+
+  <!--כותרת במשתנה בהתאם לשעה-->
+  <div class="row">
+
+    <div *ngIf="myService.customer.users?.length == 1" class="col-12">
+      <h1 *ngIf="hour >= 4 &&  10 > hour  "> בוקר טוב {{myService.customer.users[0].name}}
+        <i class="fas fa-sun"></i> </h1>
+      <h1 *ngIf="hour >= 10 && 18 > hour "> צהריים טובים {{myService.customer.users[0].name}} </h1>
+      <h1 *ngIf="hour >= 18 && 22 > hour"> ערב טוב {{myService.customer.users[0].name}}
+        <i class="fas fa-glass-cheers"></i></h1>
+      <h1 *ngIf="hour >= 22 || 4 > hour"> לילה טוב {{myService.customer.users[0].name}}
+        <i class="fas fa-moon"></i> </h1>
+      <br>
+    </div>
+
+    <div *ngIf="myService.customer.users?.length != 1" class="col-12">
+      <h1 *ngIf="hour >= 4 &&  10 > hour  "> בוקר טוב
+        <i class="fas fa-sun"></i> </h1>
+      <h1 *ngIf="hour >= 10 && 18 > hour "> צהריים טובים </h1>
+      <h1 *ngIf="hour >= 18 && 22 > hour"> ערב טוב
+        <i class="fas fa-glass-cheers"></i></h1>
+      <h1 *ngIf="hour >= 22 || 4 > hour"> לילה טוב
+        <i class="fas fa-moon"></i> </h1>
+      <br>
+    </div>
+
+  </div>
+
+  <!--אין פעולות, אין אמצעי תשלום בכלל:-->
+  <div *ngIf="myService.allActions?.length == 0 && myService.customer?.methodPayments?.length == 0">
+
+    <div class="row">
+      <div class="col-12">
+        <p style="text-align: center;">ברוך הבא ל SaveLi <i class="far fa-smile-beam"></i> ,</p>
+        <p>
+          SaveLi מאפשרת לך לעקוב אחרי ההוצאות וההכנסות שלך בשתי דרכים:<br>
+          <b> על פי תאריך ביצוע העסקה </b> - התאריך בו ביצעת את ההוצאה/הכנסה בפועל. <br>
+          <b> על פי תאריך חיוב העסקה </b> - התאריך בו ההוצאה תחוייב מחשבונך או בו ההכנסה תתקבל אל חשבונך. </p>
+        <br>
+        <p style="text-align: center;">
+          <span> איך זה מתבצע <i class="fas fa-question"></i> פשוט מאוד <i class="fas fa-exclamation"></i> </span> <br>
+          עבור כל עסקה <i class="fas fa-arrow-left"></i> צריך לציין אמצעי תשלום בו היא התבצעה. <br>
+          לכל אמצעי תשלום <i class="fas fa-arrow-left"></i> תתבקש מראש לציין יום חיוב.<br>
+          לנוחותך תתאפשר תצוגה של העסקאות שלך על פי תאריך ביצוען או חיובן בפועל. <br>
+          קדימה, בוא נגדיר את אמצעי התשלום הראשון שלך! <br>
+
+
+
+        </p>
+        <button class="btn btn-primary start-btn" (click)="moveToMethodPaymentPage()"> התחל <i
+            class="fas fa-angle-double-left"></i> </button>
+      </div>
+    </div>
+  </div>
+
+  <!--קיימים אמצעי תשלום, לא תיעד עסקאות-->
+  <div class="row" *ngIf="myService.customer.methodPayments.length > 0 && myService.allActions?.length == 0 ">
+
+    <div class="col-12">
+      <h4> עדיין לא תיעדת עסקאות <i class="far fa-dizzy"></i> ...</h4>
+      <p style="margin: 20px auto;text-align: center;"> הוסף עכשיו את העסקה הראשונה שלך ! </p>
+      <button class="btn btn-danger btn-sm btn-add-action" (click)="moveToExpensePage()"> הוסף הוצאה </button>
+      <button class="btn btn-success btn-sm btn-add-action" (click)="moveToIncomePage()"> הוסף הכנסה </button>
+    </div>
+
+  </div>
+
+  <!-- קיימות עסקאות מתועדות-->
+  <div @showStete *ngIf="myService.allActions?.length > 0">
+
+    <h4 style="text-decoration: underline"> הפעולות האחרונות שתיעדת: </h4>
+
+    <table class="table table-hover table-sm" style="background-color: #f8f9fa; margin: auto;">
+      <thead>
+        <tr>
+          <th> קטגוריה</th>
+          <th> סכום </th>
+          <th> תאריך ביצוע </th>
+          <th class="not-display-in-xs"> תאריך חיוב </th>
+          <th> אמצעי תשלום</th>
+          <th *ngIf="myService.customer.users.length > 1"> משתמש</th>
+          <th> מחק </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let a of recentActions; let i = index">
+          <td> {{a.category.name}} </td>
+          <td> {{a.amount}} ש"ח </td>
+          <td> {{displayDateHebrow(a.actionDate)}}</td>
+          <td class="not-display-in-xs"> {{displayDateHebrow(a.debitDate)}} </td>
+          <td> {{a.methodPayment.name}} </td>
+          <td *ngIf="myService.customer.users.length > 1"> {{a.user.name}} </td>
+          <td> <button class="btn" style="padding: 0" (click)="deleteAction(a.id, i)"> <i class="far fa-trash-alt"></i>
+            </button> </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <button class="btn btn-outline-dark" (click)="router.navigate(['/action/all/0/0/0/action'])"> נהל את הפעולות שתיעדת</button>
+    <hr>
+
+  </div>
+
+
+  <!--קיימות עסקאות באופן כללי-->
+  <div @showStete *ngIf="myService.allActions?.length > 0">
+
+    <!-- לא קיימות עסקאות בחודש הנוכחי -->
+    <div @showStete *ngIf="actionThisMonth == false">
+
+      <div *ngIf="myService.customer.users.length > 1">
+        <h5> צפה בסיכומים החודשיים שלך </h5>
+        <button class="btn btn-dark btn-sm" style="margin: 10px" (click)="router.navigate(['/summary'])">עבור אל
+          הסיכומים
+          החודשיים</button>
+      </div>
+
+      <div *ngIf="!(myService.customer.users.length > 1)">
+        <h5> שמעת כבר על האופן בו אנו מאפשרים לנהל מעקב אחר משק הבית <i class="fas fa-home"></i> ? </h5>
+        <p style="text-align: center; margin: auto; width: auto;"> עבור אל עמוד ניהול המשתמשים ותוכל להוסיף עוד משתמשים
+          שהיו מורשים לתעד עסקאות בחשבונך </p>
+        <button class="btn btn-dark btn-sm btn-add-action" (click)="moveToUserPage()"> עמוד ניהול המשתמשים </button>
+      </div>
+
+    </div>
+
+    <!-- קיימות עסקאות בחודש הנוכחי:-->
+    <div @showStete *ngIf="actionThisMonth == true" style="margin-top: 20px;">
+      <div style="margin: 25px auto">
+        <h4 style="text-decoration: underline; display: inline;"> מאזן העסקאות שלך בחודש הנוכחי </h4>
+        <h4 style="display: inline;"> <i class="fas fa-balance-scale"></i> : </h4>
+      </div>
+
+      <div class="row" style="margin-right:30px;">
+
+        <div >
+          <button class="btn btn-primary btn-sm btn-attached" style="margin-left: 5px;" [ngClass]="{'btn-primary':byDebit, 'btn-light':!byDebit}"
+            [disabled]="byDebit == true" (click)="byDebit = true"> הצג על פי חיובים </button>
+        </div>
+  
+        <div >
+          <button class="btn btn-light btn-sm btn-attached" [ngClass]="{'btn-primary':!byDebit,'btn-light':byDebit}"
+            [disabled]="byDebit == false" (click)="byDebit = false"> הצג על פי ביצועים </button>
+        </div>
+      </div>
+      <div class="row" style="background-color: #383d4117; border-radius: 30px; margin: auto;">
+
+        <google-chart class="col-12" *ngIf="byDebit == true" [data]="columnChartByDebit" [options]="options"
+          type="ColumnChart"> </google-chart>
+
+        <google-chart class="col-12" *ngIf="byDebit == false" [data]="columnChartByAction" [options]="options"
+          type="ColumnChart"> </google-chart>
+
+        <p class="col-12" style="text-align: center" *ngIf="byDebit == true"> התרשים הנ"ל מתייחס לעל ההעסקאות שתאריך
+          החיוב
+          שלהם התבצע בחודש זה </p>
+        <p class="col-12" style="text-align: center" *ngIf="byDebit == false"> התרשים הנ"ל מתייחס לעל ההעסקאות שתאריך
+          הביצוע שלהם התבצע בחודש זה </p>
+      </div>
+      <button class="btn btn-dark btn-sm" style="margin: 10px" (click)="router.navigate(['/summary'])">עבור אל הסיכומים
+        החודשיים</button>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,93 @@
+/* עיצוב למסך שמופיע כשאין אמצעי תשלום */
+
+.header{
+    background: #f1c84d;
+    padding: 50px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+.mp-info{
+    text-align: center;
+    margin: auto;
+    margin-bottom: 5px;
+    width: 94%;
+}
+
+.btn-start{
+    margin: 5px;
+    animation: shaek 1s 0.5s ease-out infinite;
+}
+
+@keyframes shaek{
+    0%{
+        transform: scale(1)
+    }
+    50%{
+        transform: scale(1.15)
+    }
+    100%{
+    transform: scale(1)
+  
+    }
+    }
+
+/* עיצוב לחלק שיש אמצעי תשלום */
+
+.container-mp{
+    margin: 20px;
+}
+
+.invalidInput{
+    color: red;
+    font-size: bold;
+    font-weight: 80% 
+}
+
+@media only screen and (max-width: 600px){
+    .container-mp{
+        margin: 5px;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    
+    #maxUsers{
+        font-size: 80%;
+        padding: 0;
+        margin: auto 10px;
+    }
+
+
+    .header{
+        background: #f1c84d;
+        padding: 25px;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+    }
+
+    .header h1{
+        font-size: 1.75rem;
+    }
+}
+
+
+/*עיצוב להכל*/
+
+.container{
+    background:#ffffffde;
+    border: 1px solid black;
+    padding: 50px;
+    border-radius: 30px;
+}
+
+
+@media only screen and (max-width:  400px){
+
+    #close-info-btn{
+        margin-right: 35px;
+        font-size: smaller;
+    }
+  
+  }
+

@@ -1,0 +1,168 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <!--The brand-->
+  <a class="navbar-brand logo" style="margin:0" routerLink="/home"> SaveLi. </a>
+
+  <!--The button that apper if the srcen srinke-->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item active" data-toggle="collapse" data-target=".navbar-collapse.show" *ngIf="loginService.loginType == 'CUSTOMER'">
+        <a class="nav-link" routerLink="/addIncome"  routerLinkActive="routerClick">
+          <i class="fas fa-plus"></i> הוסף הכנסה
+        </a>
+      </li>
+
+      <li class="nav-item active" data-toggle="collapse" data-target=".navbar-collapse.show" *ngIf="loginService.loginType == 'CUSTOMER'">
+        <a class="nav-link" routerLink="/addExpense" routerLinkActive="routerClick">
+          <i class="fas fa-minus"></i> הוסף הוצאה
+        </a>
+      </li>
+
+      <li class="nav-item active" data-toggle="collapse" data-target=".navbar-collapse.show" *ngIf="loginService.loginType == 'CUSTOMER'">
+        <a class="nav-link" routerLink="/user" routerLinkActive="routerClick">
+          <i class="fas fa-users"></i> נהל משתמשים
+        </a>
+      </li>
+
+      <li class="nav-item active" data-toggle="collapse" data-target=".navbar-collapse.show" *ngIf="loginService.loginType == 'CUSTOMER'">
+        <a class="nav-link" routerLink="/methodPayment" routerLinkActive="routerClick">
+          <i class="fas fa-credit-card"></i> נהל אמצעי תשלום
+        </a>
+      </li>
+
+      <li class="nav-item active" data-toggle="collapse" data-target=".navbar-collapse.show" *ngIf="loginService.loginType == 'CUSTOMER'">
+          <a class="nav-link" routerLink="/action/all/0/0/0/action" routerLinkActive="routerClick">
+           <i class="fas fa-cash-register"></i> נהל פעולות 
+          </a>
+        </li>
+
+
+  
+      <li class="nav-item active" data-toggle="collapse" data-target=".navbar-collapse.show" *ngIf="loginService.loginType == 'CUSTOMER'">
+        <a class="nav-link" routerLink="/summary" routerLinkActive="routerClick">
+          <i class="fas fa-chart-pie"></i> דו"חות חודשיים
+        </a>
+      </li>
+
+      <li class="nav-item active" data-toggle="collapse" data-target=".navbar-collapse.show" *ngIf="loginService.loginType == 'CUSTOMER'">
+        <a class="nav-link" routerLink="/settings" routerLinkActive="routerClick">
+          <i class="fas fa-user-cog"></i> הגדרות
+        </a>
+      </li>
+
+  
+      <li class="nav-item active" data-toggle="collapse" data-target=".navbar-collapse.show" *ngIf="loginService.loginType == 'ADMIN'">
+        <a class="nav-link" routerLink="/customers" routerLinkActive="routerClick"> <i
+            class="fas fa-user-astronaut"></i> לקוחות</a>
+      </li>
+
+      <li class="nav-item active" data-toggle="collapse" data-target=".navbar-collapse.show" *ngIf="loginService.loginType == 'ADMIN'">
+        <a class="nav-link" routerLink="/categories" routerLinkActive="routerClick"> <i
+            class="fas fa-clipboard-list"></i> קטגוריות </a>
+      </li>
+
+      <li class="nav-item active" data-toggle="collapse" data-target=".navbar-collapse.show" *ngIf="loginService.loginType == 'ADMIN' || loginService.loginType == 'CUSTOMER'">
+        <button class="btn nav-link" style="display:inline" (click)="preformLogout()"><i
+            class="fas fa-sign-out-alt"></i> התנתק</button>
+      </li>
+
+
+
+      <li class="nav-item active" data-toggle="collapse" data-target=".navbar-collapse.show" *ngIf="loginService.loginType == 'GUEST' || !loginService.loginType">
+        <a class="nav-link" routerLink="/login" routerLinkActive="routerClick"> <i class="fas fa-sign-in-alt"></i>
+          התחבר</a>
+      </li>
+
+      <li class="nav-item active" data-toggle="collapse" data-target=".navbar-collapse.show" *ngIf="loginService.loginType == 'GUEST' || !loginService.loginType">
+        <a class="nav-link" routerLink="/registration" routerLinkActive="routerClick"> <i class="fas fa-user-plus"></i>
+          הירשם</a>
+      </li>
+
+
+    </ul>
+    <!--
+    The menu that apper if customer logged-in
+    <ul class="navbar-nav mr-auto" *ngIf="loginService.loginType == 'CUSTOMER'">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/addIncome" routerLinkActive="routerClick"> 
+          <i class="fas fa-plus"></i> הוסף הכנסה
+        </a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/addExpense" routerLinkActive="routerClick">
+          <i class="fas fa-minus"></i> הוסף הוצאה
+        </a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/user" routerLinkActive="routerClick">
+          <i class="fas fa-users"></i> נהל משתמשים
+        </a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/methodPayment" routerLinkActive="routerClick">
+          <i class="fas fa-credit-card"></i> נהל חשבונות
+        </a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/summary" routerLinkActive="routerClick">
+          <i class="fas fa-chart-pie"></i> דו"חות חודשיים
+        </a>
+      </li>
+
+      <li class="nav-item active">
+          <a class="nav-link" routerLink="/settings" routerLinkActive="routerClick">
+            <i class="fas fa-user-cog"></i> הגדרות
+          </a>
+        </li>
+
+      <li class="nav-item active">
+        <button class="btn nav-link" (click)="loginService.preformLogout()"><i class="fas fa-sign-out-alt"></i> התנתק</button>
+      </li>
+    </ul>
+  -->
+
+    <!--The menu that apper if no one logged-in 
+    <ul class="navbar-nav mr-auto" *ngIf="loginService.loginType == 'GUEST' || !loginService.loginType">
+
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/login" routerLinkActive="routerClick"> <i class="fas fa-sign-in-alt"></i>
+          התחבר</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/registration" routerLinkActive="routerClick"> <i class="fas fa-user-plus"></i>
+          הירשם</a>
+      </li>
+
+    </ul>
+
+    <ul class="navbar-nav mr-auto" *ngIf="loginService.loginType == 'ADMIN'">
+
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/customers" routerLinkActive="routerClick"> <i
+            class="fas fa-user-astronaut"></i> לקוחות</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/categories" routerLinkActive="routerClick"> <i
+            class="fas fa-clipboard-list"></i> קטגוריות </a>
+      </li>
+
+      <li class="nav-item active">
+        <button class="btn" (click)="loginService.preformLogout()"><i class="fas fa-sign-out-alt"></i> התנתק</button>
+      </li>
+    </ul>
+-->
+  </div>
+</nav>

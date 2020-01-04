@@ -1,0 +1,76 @@
+[
+    {
+        "id": 16,
+        "email": "Family@gmail.com",
+        "password": "1234",
+        "methodPayments": [
+            {
+                "id": 79,
+                "name": "חשבון עו\"ש משותף",
+                "active": true,
+                "debitDate": 0
+            },
+            {
+                "id": 80,
+                "name": "כרטיס אשראי ישראל",
+                "active": true,
+                "debitDate": 10
+            },
+            {
+                "id": 81,
+                "name": "כרטיס אשראי ישראלה",
+                "active": true,
+                "debitDate": 2
+            },
+            {
+                "id": 82,
+                "name": "חשבון עו\"ש ישראל",
+                "active": true,
+                "debitDate": 0
+            }
+        ],
+        "users": [
+            {
+                "id": 34,
+                "name": "ישראל",
+                "active": true
+            },
+            {
+                "id": 35,
+                "name": "ישראלה",
+                "active": true
+            },
+            {
+                "id": 36,
+                "name": "ילדים",
+                "active": true
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "email": "single@gmail.com",
+        "password": "1234",
+        "methodPayments": [
+            {
+                "id": 83,
+                "name": "חשבון עו\"ש",
+                "active": true,
+                "debitDate": 0
+            },
+            {
+                "id": 84,
+                "name": "אשראי",
+                "active": true,
+                "debitDate": 10
+            }
+        ],
+        "users": [
+            {
+                "id": 37,
+                "name": "דני",
+                "active": true
+            }
+        ]
+    }
+]

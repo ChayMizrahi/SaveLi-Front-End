@@ -1,0 +1,70 @@
+<div class="container" >
+  <div class="row" style="padding: 20px; background-color: #f0f8ff94" [ngStyle]="{'direction': displayRtl() ? 'rtl' : 'ltr'}" >
+
+    <div class="col-4 mp-details">
+      <h3 *ngIf="!update" style="display: block;margin: auto;" [ngStyle]="{'color': methodPayment.active==true ? 'black' : '#ccc'}">{{methodPayment.name}}</h3>
+      <button class="btn" *ngIf="!update" (click)="showEdit = !showEdit" style="padding: 0; margin: 0; margin-top: -8px;" ><i class="far fa-edit"></i></button>
+      <input *ngIf="update" type="text" name="name" maxlength="25" required (input)="checkNameNotExists(mpForUpdate.name)" [(ngModel)]="mpForUpdate.name" > 
+      <div *ngIf="update && mpNameForUpdateIsValid == false"> שם האמצעי שבחרת כבר קיים. </div>
+      <div *ngIf="methodPayment.debitDate == 0 && !update" style="font-size: 105%" [ngStyle]="{'color': methodPayment.active==true ? 'black' : '#ccc'}"> חיוב מיידי. </div>
+      <div *ngIf="methodPayment.debitDate > 0 && !update" style="font-size: 105%" [ngStyle]="{'color': methodPayment.active==true ? 'black' : '#ccc'}">חיוב ביום ה{{methodPayment.debitDate}} לחודש.</div>
+      <hr style="margin: 2px;">
+      <div *ngIf="!methodPayment.active && update==false && showEdit==false" style="font-size: 80%"> <span style="font-style: italic;"> "{{methodPayment.name}}" </span> לא פעיל - לא ניתן לתעד  פעולות חדשות </div>
+
+      <select *ngIf="update" [(ngModel)]="mpForUpdate.debitDate">
+        <option  value="0"> חיוב מיידי </option>
+        <option  value="1"> 1 </option>
+        <option  value="2"> 2 </option>
+        <option  value="10"> 10 </option>
+        <option  value="15"> 15 </option>
+        <option  value="20"> 20 </option>
+      </select>
+
+      <button class="btn btn-sm btn-danger" *ngIf="mpActions.length == 0 && !update && showEdit" (click)="onDeleteMp()"> מחק </button>
+      <button class="btn btn-sm btn-dark makeActive" *ngIf=" methodPayment.active == true && !update && showEdit " (click)="updateActive()"> הפוך ללא פעיל
+      </button>
+      <button class="btn btn-sm btn-success makeActive" *ngIf="methodPayment.active == false && !update && showEdit" (click)="updateActive()"> הפוך לפעיל
+      </button>
+      <button *ngIf="!update && showEdit" class="btn btn-sm btn-info" (click)="startUpdate()"> עדכן </button>
+      <button class="btn btn-danger btn-sm" *ngIf="update == true" (click)="update = false"> בטל עדכון </button>
+      <button class="btn btn-primary btn-sm" [disabled]=" !mpForUpdate.name?.length > 0 || !mpNameForUpdateIsValid " *ngIf="update == true" (click)="onUpdateMp()"> שמור </button>
+    </div>
+
+    <div class="col-8 mp-actions">
+      <div *ngIf="mpActions.length > 0" class="container">
+        <h5> הפעולות האחרונות שבוצעו באמצעות "{{methodPayment.name}}": </h5>
+        <table class="table table-hover table-sm">
+          <thead>
+            <tr class="row">
+              <th class="base-tbale-col"> תאריך ביצוע </th>
+              <th class="base-tbale-col"> קטגוריה </th>
+              <th class="base-tbale-col"> סכום </th>
+              <th class="unbase-tbale-col"> על ידי </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="row" *ngFor="let action of getTopThreeAction()">
+              <td class="base-tbale-col">{{displayDateHebrow(action.actionDate)}}</td>
+              <td class="base-tbale-col">{{action.category.name}}</td>
+              <td class="base-tbale-col">{{action.amount}}</td>
+              <td class="unbase-tbale-col">{{action.user.name}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="btn btn-primary btn-sm" (click)="onMoveActions()"> צפה ונהל את כל הפעולות </button>
+      </div>
+
+      <div *ngIf="mpActions.length == 0">
+        <h5> לא נרשמו פעולות על אמצעי תשלום זה. </h5>
+        <p> תעד הכנסה / הוצאה חדשה וציין את {{methodPayment.name}} כאמצעי דרכו בוצע העסקה </p>
+        <button class="btn btn-danger btn-sm" id="add" style="margin: auto 2px" (click)="onMoveExpense()"> הוסף הוצאה </button>
+        <button class="btn btn-success btn-sm" id="add" style="margin: auto 2px" (click)="onMoveIncome()"> הוסף הכנסה </button>
+      </div>
+
+    </div>
+  </div>
+  <hr>
+</div>
+
+
+

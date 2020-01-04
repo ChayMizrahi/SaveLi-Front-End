@@ -1,0 +1,95 @@
+.container{
+  background:#ffffffde;
+  border: 1px solid black;
+  border-radius: 30px;
+  width: 50%;
+}
+
+.cover{
+  background-image: url(https://images.unsplash.com/photo-1502101872923-d48509bff386?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80);
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.hearedArea{
+  background-color: #c1defe52;
+  background-position: center;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.cover h3 {
+  font-size: 2rem;
+  margin: 0;
+  padding-top: 30px;
+  color: #212529;
+  text-shadow: 3px 3px 2px #adb5bd;
+}
+
+.cover p{
+  margin-top: 0;
+  font-size: 1rem;
+  color: #212529;
+  text-shadow: 3px 3px 2px #adb5bd;
+}
+
+.textArea{
+  background-color: #ffffff6e;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.invalidInput{
+  font-size: 80%;
+  color: #dc3545;
+  font-weight: bold;
+}
+
+
+
+.inputArea{
+  background-color: #efeaea69;
+  margin: 2px auto;
+  padding-top: 4px;
+  padding-bottom: 2px;
+  padding-left: 20px;
+  text-align: center;
+  width:80%;
+  border-radius: 30px;
+}
+
+.inputArea label{
+  font-weight: bold;
+  font-size: 80%;
+}
+
+.form-control{
+  text-align: center
+}
+
+button{
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.col-12{
+  padding-right: 0px; 
+  padding-left: 0px;
+}
+
+@media only screen and (max-width: 768px){
+  .container{
+    width: 100%;
+ }
+}

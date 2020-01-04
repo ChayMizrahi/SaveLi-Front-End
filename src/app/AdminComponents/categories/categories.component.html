@@ -1,0 +1,129 @@
+<div class="container  col-xs-12">
+
+  <!--The title of the page-->
+  <div class="row">
+    <div class="col-sm-12">
+      <h1> עמוד ניהול הקטגוריות </h1>
+    </div>
+  </div>
+
+  
+  <!--Display the info about the category-->
+  <div>
+    <div style="text-align: right; ">
+      <button *ngIf="getInfo == false" class="btn btn-info" (click)="getInfo = true"> <i class="fas fa-info"></i>
+      </button>
+      <button *ngIf="getInfo == true" class="btn btn-danger" (click)="getInfo = false"> <i
+          class="far fa-window-close"></i> </button>
+      <div *ngIf="getInfo == true" style="padding: 15px; background-color: #36ff003d">
+        <h5> כמה דברים שחשוב לשים לב: </h5>
+        <p> 1. הקטגוריות בסופו של דבר מופיעות אצל המשתמשים כשהם מוסיפים הוצאה או הכנסה חדשה, חשוב שלא היו שגיאות כתיב
+          ושהכתב יהיה ברור. </p>
+        <p> 2. השדה <b>סוג</b> יקבע איפה הקגטוריה תופיע, בעת הכנסה או בעת הוצאה. </p>
+        <p> 3. השדה <b>מספר שימושים</b> מגדיר את מספר הפעמים בהם נבחרה הקטגוריה לייצג פעולה מסויימת. הספירה תעלה באחד
+          בזמן הוספת פעולה עם הקטגוריה, ותרד באחת אם הלקוח ימחוק פעולה עם הקטגוריה שנבחרה. </p>
+        <p> 4. ניתן למחוק קטגוריות רק אם מספר השימושים בהם שווה ל0 - אם בכל זאת תרצה למנוע מקטגוריה להופיע אצל הלקוחות
+          תוכל להפוך אותה ללא פעילה ואז הלקוח לא יראה אותה בעת הוספת פעולה. </p>
+        <p> 5. <b> חשוב מאוד </b> כל עדכון אצל הקגטוריה יתבצע גם אצל כל הקטגוריות שכבר נרשמו על ידי הלקוחות לכן, אם אתה
+          משנה שם של קגטוריה הקפד להישאר כמה שיותר קרוב לשם המקור. </p>
+      </div>
+      <hr>
+    </div>
+  </div>
+
+
+  <!--The tabke with all the categorirs-->
+  <div class="container" style="background-color: #9d888826">
+    <div>
+      
+      <!--The butten that allow to add new category-->
+      <span style="display: flex;">
+        <button (click)="addNew = true" [disabled]="addNew == true" class="btn btn-primary btn-sm"> הוסף קטגוריה חדשה
+        </button>
+      </span>
+
+      <!--the table with all the category-->
+      <div style="background-color:#93888852;" *ngIf="allCategories">
+        <table class="table table-hover table-sm">
+          <!--The header of the categories-->
+          <thead>
+            <tr>
+              <th> <button class="btn" (click)="sortCategory('name')"> שם </button> </th>
+              <th> <button class="btn" (click)="sortCategory('description')"> תיאור </button> </th>
+              <th> <button class="btn" (click)="sortCategory('usedTotal')"> מספר השימושים </button> </th>
+              <th> <button class="btn" (click)="sortCategory('type')"> סוג </button> </th>
+              <th> <button class="btn" (click)="sortCategory('active')"> מצב </button> </th>
+              <th> מחק </th>
+              <th> עדכן </th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <!--The row thet apper when the user click to add category-->
+            <tr *ngIf="addNew" style="background-color: #2839a75c">
+              <td> <input type="text" [(ngModel)]="addCategory.name" placeholder="הכנס שם לקטגוריה חדשה"> </td>
+              <td> <input type="text" [(ngModel)]="addCategory.description" style="width: 300px"
+                  placeholder="תאר את הקטגוריה"> </td>
+              <td> 0 </td>
+              <td> <select [(ngModel)]="addCategory.type">
+                  <option value="EXPENSE"> הוצאה </option>
+                  <option value="INCOME"> הכנסה </option>
+                </select> </td>
+              <td> פעיל </td>
+              <td> <button class="btn" (click)="addNew = false"> <i class="far fa-times-circle"> </i> </button> </td>
+              <td> <button class="btn" (click)="finishAdd()"> <i class="far fa-check-circle"></i> </button> </td>
+            </tr>
+
+            <!--The row that display the categories-->
+            <tr *ngFor="let c of allCategories; let i = index"
+              [ngStyle]="{'backgroundColor' : c.type == 'EXPENSE' ? 'rgba(255, 0, 0, 0.24)' : 'rgba(0, 255, 0, 0.27)', 'backgroundColor : rgba(0, 123, 255, 0.36)' : makeUpdate === i }"
+              [ngClass]="{'selectedUpdate': makeUpdate === i}">
+              <!--The exists categories-->
+              <td *ngIf="makeUpdate != i"> {{c.name}} </td>
+              <td *ngIf="makeUpdate != i"> {{c.description}} </td>
+              <td *ngIf="makeUpdate != i"> {{c.usedTotal}} </td>
+              <td *ngIf="makeUpdate != i"> {{actionTypeFormEnglishToHebrew(c.type)}} </td>
+              <td *ngIf="makeUpdate != i"> {{activeOrInactiveFormEnglishToHebrew(c.active)}} </td>
+              <td *ngIf="makeUpdate != i"> <button class="btn" (click)="removeCategory(c.id)"
+                  [disabled]="c.usedTotal > 0"> <i class="far fa-trash-alt"></i> </button> </td>
+              <td *ngIf="makeUpdate != i"> <button class="btn" (click)="startUpdate(i)"> <i class="far fa-edit"></i>
+                </button> </td>
+
+              <!--If the user want to update category:-->
+              <td *ngIf="makeUpdate === i"> <input type="text" [(ngModel)]="updateCategory.name"></td>
+              <td *ngIf="makeUpdate === i"> <input type="text" [(ngModel)]="updateCategory.description"
+                  style="width: 300px"> </td>
+              <td *ngIf="makeUpdate === i"> {{c.usedTotal}} </td>
+              <td *ngIf="makeUpdate === i">
+                <select [(ngModel)]="updateCategory.type">
+                  <option value="EXPENSE" [selected]="c.type == 'EXPENSE'"> הוצאה </option>
+                  <option value="INCOME" [selected]="c.type == 'INCOME'"> הכנסה </option>
+                </select>
+              </td>
+              <td *ngIf="makeUpdate === i">
+                <select [ngModelOptions]="{standalone: true}" [(ngModel)]="updateCategory.active">
+                  <option value=true [selected]="c.active === true"> פעיל </option>
+                  <option value=false [selected]="c.type === false"> לא פעיל </option>
+                </select>
+              </td>
+
+              <td *ngIf="makeUpdate === i"> <button class="btn" (click)="cancelUpdate()"> <i
+                    class="far fa-times-circle"> </i> </button> </td>
+
+              <td *ngIf="makeUpdate === i"> <button class="btn" (click)="finishUpdate()"> <i
+                    class="far fa-check-circle"> </i> </button> </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!--The loading-->
+      <div *ngIf="!allCategories">
+        <img src="assets\image\loading3.gif">
+      </div>
+
+    </div>
+  </div>
+
+
+</div>

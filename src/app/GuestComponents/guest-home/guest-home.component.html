@@ -1,0 +1,65 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-12 cover-up">
+            <div>
+                <h1 id="main-haeder"> מערכת לניהול תזרים מזומנים - SaveLi </h1>
+                <h5>מטרת המערכת היא לאפשר לאדם יחיד/משפחה לעקוב אחר ההוצאות וההכנסות באופן פשוט ונוח. </h5>
+
+                <p><span style="text-decoration: underline;font-size: 120%;"> המערכת מאפשרת:</span></p>
+                <p id="info">
+                    <i class="fas fa-check"></i> להוסיף לכל חשבון משתמשים נוספים - המשתמשים הנוספים יכולים להתחבר למערכת
+                    ולתעד פעולות הוצאות והכנסות שביצעו. <br>
+                    <i class="fas fa-check"></i> להוסיף אמצעי תשלום והגדרת תאריך החיוב שלהם <br>
+                    <i class="fas fa-check"></i> חתכי צפייה שונים עבור הפעולות השונות לפי חודש או סיכומים כלליים
+                    חודשיים. <br>
+                    <i class="fas fa-check"></i> תצוגת הוצאות והכנסות לחודש בבחירה על פי הוצאות בפועל או לפי תאריך
+                    החיוב.
+                </p>
+
+                <div>
+                    <span style="color: red; font-weight: bold;"> רוצה לצפות במשתמש לדוגמה המייצג משפחה? </span>
+                    <button class="btn btn-info btn-sm" style="margin: 5px 5px;" (click)="login('Family@gmail.com','1234')"> לחץ כאן <i class="fas fa-home"></i> </button>
+                </div>
+
+                <div>
+                    <span style="color: red; font-weight: bold;"> רוצה לצפות במשתמש לדוגמה המייצג אדם יחיד ? </span>
+                    <button class="btn btn-info btn-sm" style="margin: 5px 5px;" (click)="login('single@gmail.com','1234')"> לחץ כאן <i class="far fa-user"></i> </button>
+                </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+    <div class="row m-3 ">
+        <div class="col-6">
+            <div style="margin-bottom: 5px;"> <span style="font-size: larger;"> עדין לא רשום </span> <i
+                    class="far fa-surprise"></i>  <i class="fas fa-question"></i>  <i class="fas fa-exclamation"></i>
+            </div>
+            <button class="btn btn-primary" (click)="moveToRegistrationPage()"> הירשם עכשיו <i
+                    class="fas fa-exclamation"></i> </button>
+        </div>
+        <div class="col-6">
+            <div style="margin-bottom: 5px;"> <span style="font-size: larger;">נרשמת כבר </span> <i
+                    class="far fa-smile-beam"></i>  <i class="fas fa-question"></i></div>
+            <button class="btn btn-success" (click)="moveToLoginPage()"> התחבר </button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 cover-buttom">
+            <p>
+              <b>  שים לב: </b> <br>
+                גרסה זו מיועדת לצפיה והתרשמות בלבד. <br>
+                נתונים שתשמור או תעדכן במשתמשים לדוגמה לא ישמרו ויעלמו ברגע שבו תצא מהדף או תרענן אותו.<br>
+                תוכל ליצור משתמשים חדשים בעזרת כפתור ההרשמה ולהתחבר אליהם, אך במידה ויצאת מהדף או ביצעת רענון המשתמשים
+                שיצרת כבר לא היו קיימים. <br>
+                ליצירת קשר ניתן לפנות בכתובת
+                31chay@gmail.com
+
+            </p>
+        </div>
+    </div>
+
+</div>

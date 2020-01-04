@@ -1,0 +1,44 @@
+<div class="container">
+
+  <!--The header of the page:-->
+  <div class="row" style="height: auto">
+    <div class="col-12 cover">
+      <div class="hearedArea">
+        <h3>התחבר</h3>
+        <hr>
+      </div>
+    </div>
+  </div>
+
+  <!--The email input area -->
+  <div class="row inputArea" >
+    <div class="col-12"  >
+      <input class="form-control" maxlength="100" type="email" [(ngModel)]="theLogin.email"
+        placeholder="הכנס את המייל שלך">
+    </div>
+  </div>
+  
+  <!--The password inpur area -->
+  <div class="row inputArea">
+    <div class="col-12">
+      <input class="form-control" type="password" maxlength="20" [(ngModel)]="theLogin.password"
+        placeholder="הכנס את הסיסמה שלך">
+    </div>
+  </div>
+
+  <!--The area of the password/email incorraet-->
+  <div class="row" *ngIf="invalidLogin" >
+    <div class="col-12">
+        <div class="invalidInput" style="padding: 10px"> המייל או הסיסמה אינם נכונים, אנא נסה שנית </div>
+    </div>
+  </div>
+
+  <!--The submit butten area -->
+  <div class="row" style="margin: 10px auto">
+    <div class="col-12">
+      <button class="btn btn-dark" [disabled]="theLogin.email == undefined || theLogin.password == undefined "
+        (click)="login()"> התחבר </button>
+    </div>
+  </div>
+
+</div>

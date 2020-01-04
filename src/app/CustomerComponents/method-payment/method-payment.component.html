@@ -1,0 +1,215 @@
+<!--יציג את התוכן הזה אם לא קיימים בכלל אמצעי תשלום
+<div class="container p-0" @leaveDone *ngIf="myService.customer?.methodPayments == 0">
+
+  <div class="row mr-0 ml-0 header">
+    <div class="col-12">
+      <h1> ניהול אמצעי תשלום </h1>
+    </div>
+    <hr>
+  </div>
+
+  <div class="row p-2">
+    <div class="col-12">
+      <p>
+        לכל עסקה שתתעד בעתיד יהיה מצויין אמצעי התשלום באמצעותו בעסקה בוצעה, אנו מציעים שני סוגים של אמצעי תשלום:
+      </p>
+    </div>
+  </div>
+
+  <div class="row p-2">
+
+    <div @leaveRight *ngIf="infoForNew" class="col-6" style="width: 80%;">
+      <h5 style="text-decoration:underline"> אמצעי תשלום עם חיוב מיידי </h5>
+      <p class="mp-info">
+        כל עסקה שתשוייך לאמצעי תשלום מסוג זה תשפיע מיידית על מצבך בחשבון. <br>
+        ניתן להשוות זאת לתשלום במזומן או העברה בנקאית ואפשר גם לקורא לזה חשבון עובר ושב או ארנק <i
+          class="fas fa-wallet"></i>
+      </p>
+      <button class="btn btn-dark btn-sm btn-start" (click)="finishInfoNewAndAddMp(true)"> צור כזה! </button>
+    </div>
+
+    <div @leaveLeft *ngIf="infoForNew" class="col-6" style="width: 80%;">
+      <h5 style="text-decoration:underline"> אמצעי תשלום עם חיוב חודשי </h5>
+      <p class="mp-info">
+        כל העסקאות שירשמו על אמצעי תשלום זה יופיעו בחשבונך פעם אחת בחודש בתאריך החיוב שהגדרת. <br>
+        ניתן להשוות עסקאות אלו לעסקאות שבוצעו באמצעות כרטיס אשראי <i class="far fa-credit-card"></i> <br>
+      </p>
+      <button class="btn btn-dark btn-sm btn-start" (click)="finishInfoNewAndAddMp(false)"> צור כזה! </button>
+    </div>
+
+    <div @apperUp *ngIf="!infoForNew && !cash" class="col-12" style="width: 80%;">
+      <h5 style="text-decoration:underline"> יצירת אמצעי תשלום עם חיוב חודשי </h5>
+      <p class="mp-info">
+        כל העסקאות שירשמו על אמצעי תשלום זה יופיעו בחשבונך פעם אחת בחודש בתאריך החיוב שתגדיר. <br>
+        ניתן להשוות עסקאות אלו לעסקאות שבוצעו באמצעות כרטיס אשראי <i class="far fa-credit-card"></i> <br>
+      </p>
+      <label for="name" style="margin-left: 5px;"> בחר את שם אמצעי התשלום</label>
+      <input type="text" style="text-align: center" [(ngModel)]="newMethodPayment.name" placeholder="כרטיס האשראי שלי"
+        #name="ngModel" required maxlength="20"><br>
+      <label for="debitDay" style="margin-left: 5px;"> בחר את יום החיוב : </label>
+      <select id=debitDay [(ngModel)]="newMethodPayment.debitDate">
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=10>10</option>
+        <option value=15>15</option>
+        <option value=20>20</option>
+      </select>
+      <button class="btn btn-primary btn-sm " style="display: block; margin: auto;" [disabled]="name.invalid"
+        (click)="addMethodPayment()"> סיים
+      </button>
+    </div>
+
+    <div @apperUp *ngIf="!infoForNew && cash" class="col-12" style="width: 80%;">
+      <h5 style="text-decoration:underline"> יצרת אמצעי תשלום עם חיוב מיידי </h5>
+      <p class="mp-info">
+        כל העסקאות שירשמו על אמצעי תשלום זה יופיעו מייד בחשבונך. <br>
+        ניתן להשוות זאת לתשלום במזומן או העברה בנקאית ואפשר גם לקורא לזה חשבון עובר ושב או ארנק <i
+          class="fas fa-wallet"></i>
+      </p>
+      <label style="margin-left: 5px;"> בחר שם לאמצעי התשלום: </label>
+      <input type="text" style="text-align: center" #name="ngModel" required [(ngModel)]="newMethodPayment.name"
+        placeholder="הארנק שלי.. מזומן.." maxlength="20">
+      <button class="btn btn-primary btn-sm " style="display: block; margin: auto;" [disabled]='name.invalid'
+        (click)="addMethodPayment()"> סיים </button>
+    </div>
+
+  </div>
+
+  <div @leaveDone *ngIf="infoForNew" class="row pt-3 pr-3 pl-3">
+    <div class="col-12">
+      <p>
+        דרך אגב <i class="far fa-star"></i>
+        , תוכל להוסיף עד חמישה אמצעי תשלום לבחירתך גם בהמשך :)
+      </p>
+    </div>
+  </div>
+
+  <div @leaveDone *ngIf="infoForNew" class="row pr-3 pl-3">
+    <div class="col-12">
+      <p>
+        כדי לדעת <i class="fas fa-hand-point-left"></i>
+        תוכל לעדכן את אמצעי התשלום שלך בכל רגע נתון אך העסקאות הקודמות שביצעת ישארו אותו הדבר כמו לפני העדכן
+      </p>
+    </div>
+  </div>
+
+  <div @leaveDone *ngIf="infoForNew" class="row pr-3 pl-3">
+    <div class="col-12">
+      <p>
+        חשוב שתדע <i class="fas fa-exclamation"></i>
+        לא תוכל למחוק אמצעי תשלום לאחר שרשמת פעולות על שמו..
+      </p>
+    </div>
+  </div>
+
+</div>
+-->
+
+<!-- יציג את התוכן הזה רק עם יש למשתמש לפחות אמצעי תשלום אחד.-->
+<div class="container p-0" *ngIf="allMethodPayments && allActions">
+
+  <div class="row mr-0 ml-0 header" >
+    <div class="col-12">
+      <h1 style="text-decoration: underline">ניהול אמצעי התשלום</h1>
+    </div>
+    <hr>
+  </div>
+
+
+  <!--כפתורים להוספת אמצעי תשלום חדש-->
+  <div class="row " style="margin-top: 20px">
+
+    <!--כפתור להצגת מידע-->
+    <div class="col-4">
+      <button class="btn btn-info" *ngIf="!MethodPaymentInfo" (click)="openInfo()"> <i class="fas fa-info"></i>
+      </button>
+      <button class="btn btn-secondary" id="close-info-btn" *ngIf="MethodPaymentInfo" (click)="MethodPaymentInfo = false">מזער
+        מידע</button>
+    </div>
+
+
+    <!--כפתור להוספת אמצעי תשלום חדש-->
+    <div class="col-8">
+      <button *ngIf="create == false && 5 > allMethodPayments?.length" class="btn btn-dark" (click)="openAddByCash()"><i class="fas fa-plus"></i> </button>
+      <button *ngIf="allMethodPayments?.length == 5" id="maxUsers" class="btn btn-dark btn-sm" [disabled]="true"> הגעת לכמות אמצעי תשלום מקסימלית </button>
+      <button *ngIf="create == true" class="btn btn-secondary" (click)="create = false"> בטל
+      </button>
+    </div>
+
+
+    <!--מידע על אמצעי התשלום:-->
+    <div class="row" *ngIf="MethodPaymentInfo" style="margin: auto">
+      <div class="col-12">
+        <div class="info-mp">
+          <br>
+          <h5 style="text-decoration: underline">מידע על אמצעי התשלום</h5>
+          <p> כדי להוסיף אמצעי תשלום חדש,לחץ על הכפתור <button class="btn btn-dark btn-sm"
+              style="opacity: 1;margin-right: 2px;" [disabled]="true"><i class="fas fa-plus"></i></button> 
+            המופיע למעלה בצד שמאל</p>
+          <div class="mp-info">
+            <b>שים <i class="fas fa-heart" style="color: red;"></i></b> : <br>
+            <i class="fas fa-circle" style="font-size: 7px; padding: 5px 0;"></i> אפשר להוסיף עד חמישה אמצעי תשלום. <br>
+            <i class="fas fa-circle" style="font-size: 7px; padding: 5px 0;"></i> אפשר למחוק רק אמצעי תשלום שלא נרשמו
+            פעולות על שמם. <br>
+            <i class="fas fa-circle" style="font-size: 7px; padding: 5px 0;"></i> אמצעי תשלום שמוגדר כלא פעיל לא ינתן
+            כאופציה בעת תיעוד עסקה חדשה. <br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="margin: auto" *ngIf="create">
+      <div class="col-12">
+        <div style="margin: auto;">
+
+          <div style="padding: 15px">
+            <label for="name">בחר כינוי לאמצעי התשלום:</label><br>
+            <input id="name" type="text" maxlength="25" style="text-align: center" required
+              placeholder="עובר ושב.. כרטיס אשראי.. "
+              (input)="nameAlreadyExists = checkIfNewNameAlreadyExists(newMethodPayment.name)"
+              [(ngModel)]="newMethodPayment.name">
+            <div class="invalidInput"> {{newNameMessage}}</div>
+          </div>
+
+          <div style="padding: 15px">
+            <label style="display: block"> בחר תאריך חיוב בחודש: </label>
+            <select style="text-align: center;" [(ngModel)]="newMethodPayment.debitDate">
+              <option style="text-align: center" value="0"> חיוב מיידי </option>
+              <option style="text-align: center" value="1"> 1 </option>
+              <option style="text-align: center" value="2"> 2 </option>
+              <option style="text-align: center" value="10"> 10 </option>
+              <option style="text-align: center" value="15"> 15 </option>
+              <option style="text-align: center" value="20"> 20 </option>
+            </select>
+          </div>
+
+
+          <div>
+            <button class="btn btn-primary btn-sm" [disabled]="!newMethodPayment.name || nameAlreadyExists "
+              (click)="addMethodPayment()"> הוסף
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style=" color: green"> <b> {{addMessage}} </b> </div>
+  <hr>
+
+
+
+  <!--מציג את כל אמצעי התשלום-->
+  <div class="container-mp" *ngIf="allMethodPayments?.length > 0">
+  
+    <div *ngFor="let mp of allMethodPayments; let i = index">
+      <app-mp [methodPayment]="mp" @itemList [index]="i" [mpActions]="getActionsByMpId(mp.id)"
+        [allOtherMpName]="getOtherNamesById(mp.id)" (updateMp)="updateMethodPayment($event, i)"
+        (deleteMp)="removeMethodPayment($event, i)" (moveExpense)="moveToExpense()" (moveIncome)="moveToIncome()"
+        (moveActions)="moveToActionsMp(mp.id)">
+      </app-mp>
+    </div>
+  </div>
+
+
+</div>

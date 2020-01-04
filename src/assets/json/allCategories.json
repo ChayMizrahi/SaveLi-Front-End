@@ -1,0 +1,170 @@
+[
+    {
+        "id": 1,
+        "name": "בילוים",
+        "description": "מסעדות, מסיבות, ברים",
+        "type": "EXPENSE",
+        "active": true
+    },
+    {
+        "id": 2,
+        "name": "קניות לבית ",
+        "description": "אוכל, מוצרי ניקיון, מוצרי הגיינה",
+        "type": "EXPENSE",
+        "active": true
+    },
+    {
+        "id": 3,
+        "name": "הוצאות דיור",
+        "description": "משכנתה, ארנונה, שכ\"ד",
+        "type": "EXPENSE",
+        "active": true
+    },
+    {
+        "id": 4,
+        "name": "חשבונות",
+        "description": "חשבון חשמל, מים, גז",
+        "type": "EXPENSE",
+        "active": true
+    },
+    {
+        "id": 5,
+        "name": "משכורת",
+        "description": "המשכורת הראשית ",
+        "type": "INCOME",
+        "active": true
+    },
+    {
+        "id": 6,
+        "name": "החזר",
+        "description": "החזר על רכישה שהוחזרה לחנות",
+        "type": "INCOME",
+        "active": true
+    },
+    {
+        "id": 7,
+        "name": "הוצאות רפואיות ",
+        "description": "תרופות, טיפולים שיניים, חיסונים",
+        "type": "EXPENSE",
+        "active": true
+    },
+    {
+        "id": 8,
+        "name": "לימודים",
+        "description": "ספרים, קורסים, ציוד למידה",
+        "type": "EXPENSE",
+        "active": true
+    },
+    {
+        "id": 9,
+        "name": "חינוך לילדים",
+        "description": "בית ספר, גן, חוגים,קייטנות, שיעורים פרטיים",
+        "type": "EXPENSE",
+        "active": true
+    },
+    {
+        "id": 10,
+        "name": "גאדג'טים",
+        "description": "מחשב , סלולר, ציוד הקפי",
+        "type": "EXPENSE",
+        "active": true
+    },
+    {
+        "id": 11,
+        "name": "ספורט ובריאות",
+        "description": "כולל חדר כושר, טיפולים אלטרנטיבים ועוד..",
+        "type": "EXPENSE",
+        "active": true
+    },
+    {
+        "id": 12,
+        "name": "תחבורה ציבורית",
+        "description": "אוטובוסים, מוניות ורכבות",
+        "type": "EXPENSE",
+        "active": true
+    },
+    {
+        "id": 13,
+        "name": "ביטוחים",
+        "description": null,
+        "type": "EXPENSE",
+        "active": true
+    },
+    {
+        "id": 14,
+        "name": "הוצאות רכב",
+        "description": null,
+        "type": "EXPENSE",
+        "active": true
+    },
+    {
+        "id": 15,
+        "name": "אירועים ומתנות",
+        "description": null,
+        "type": "EXPENSE",
+        "active": true
+    },
+    {
+        "id": 16,
+        "name": "תקשורת",
+        "description": null,
+        "type": "EXPENSE",
+        "active": true
+    },
+    {
+        "id": 17,
+        "name": "קצבה",
+        "description": null,
+        "type": "INCOME",
+        "active": true
+    },
+    {
+        "id": 18,
+        "name": "מזומן שונות",
+        "description": "מזומן שיצא על משהו מזדמן",
+        "type": "EXPENSE",
+        "active": true
+    },
+    {
+        "id": 19,
+        "name": "חופשה",
+        "description": "",
+        "type": "EXPENSE",
+        "active": true
+    },
+    {
+        "id": 20,
+        "name": "עמלות",
+        "description": null,
+        "type": "EXPENSE",
+        "active": true
+    },
+    {
+        "id": 21,
+        "name": "הפקדה לחיסכון",
+        "description": null,
+        "type": "EXPENSE",
+        "active": true
+    },
+    {
+        "id": 23,
+        "name": "ביגוד והנעלה",
+        "description": null,
+        "type": "EXPENSE",
+        "active": true
+    },
+    {
+        "id": 25,
+        "name": "עזרה ממהורים",
+        "description": null,
+        "type": "INCOME",
+        "active": true
+    },
+    {
+        "id": 26,
+        "name": "הכנסה נוספת",
+        "description": null,
+        "type": "INCOME",
+        "active": true
+    }
+]
